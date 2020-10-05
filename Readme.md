@@ -58,3 +58,11 @@ Siempre me gusto y apasiono el mundo de la programacion.
 Creo que las personas dentro del ambito informatico seran participes principales de los cambios a futuro.
 me veo muy comprometido con el proyecto y creo que con esfuerzo vamos a ser capaces de resolver los problemas efectiva y eficientemente.
 soy fotografo y editor de video, mi pasion por la informatica surgio cuando a los 14 años arme mi primer computadora por mi cuenta.
+
+Nombre: Juan Sebastián Nupieri.
+Soy estudiante de Ingenería en Sistemas, tengo 19 años. Mi objetivo con el e-commerce es aprender 
+nuevas tecnologías de desarrollo, siempre me gusta incursionar en nuevas areas de la programación
+y lo referido a la web, creo que es un mundo por el que me queda mucho por conocer y es apacionante 
+ir encontrando cosas nuevas constantemente. Espero, a través de este proyecto, afianzar nuevos conocimientos
+para luego poder aplicarlos en mi trabajo y futuros emprendimientos.
+
