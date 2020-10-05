@@ -32,3 +32,18 @@ Wireframe + boceto
  Netflix: https://www.netflix.com
  Spotify: https://www.spotify.com
  Google play Books: https://play.google.com/store/apps/
+
+descripcion de integrantes: 
+Nombre: Diego Fernandez Otero
+Como graduado universitario en Publicidad y Relaciones Públicas, me desarrollo actualmente en el
+área de servicios bancarios. Me desarrollo como Gerente de Sucursal. Mi objetivo es encontrar un
+puesto dentro de la organización, donde pueda ser un valor agregado estratégico para la empresa
+y así desarrollar mis habilidades actuales sumadas a las de este proyecto integrador. Sumar
+experiencia en lo digital, a mi entender, genera una sumatoria de posibilidades de crecimiento.
+Actualmente estoy casado, tengo tres hijos: Lola de 9, Tomas y Nina de 5
+
+Nombre: Facundo Nicolas Romeu.
+Siempre me gusto y apasiono el mundo de la programacion.
+Creo que las personas dentro del ambito informatico seran participes principales de los cambios a futuro.
+me veo muy comprometido con el proyecto y creo que con esfuerzo vamos a ser capaces de resolver los problemas efectiva y eficientemente.
+soy fotografo y editor de video, mi pasion por la informatica surgio cuando a los 14 años arme mi primer computadora por mi cuenta.
