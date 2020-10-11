@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/0220facu/grupo_11_ReadMe/issues"
   },
-  "homepage": "https://github.com/0220facu/grupo_11_ReadMe#readme"
+  "homepage": "https://github.com/0220facu/grupo_11_ReadMe#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
