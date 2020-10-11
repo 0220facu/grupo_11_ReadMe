@@ -1,6 +1,13 @@
 .titulo{
     font-family: 'Lato', sans-serif;
     color: rgb(73, 115, 139);
+    text-align: center;
+   
+}
+.tituloderecha{
+    font-family: 'Lato', sans-serif;
+    color: rgb(73, 115, 139);
+    text-align: right;
    
 }
 .background{
@@ -13,3 +20,15 @@
      font-size: 26px;
  }
 
+
+ .destacado{
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    text-align: center;
+ }
+
+ .texto{
+    font-family: 'Mulish', sans-serif;
+    font-weight: 200;
+    text-align: center;
+ }
