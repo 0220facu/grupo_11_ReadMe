@@ -1,0 +1,19 @@
+{
+  "name": "grupo_11_readme",
+  "version": "1.0.0",
+  "description": "Referentes:\r Trabajo integrador SPRINT 1\r Wireframe + boceto\r  Repositorio con el nombre grupo_11_ReadMe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0220facu/grupo_11_ReadMe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0220facu/grupo_11_ReadMe/issues"
+  },
+  "homepage": "https://github.com/0220facu/grupo_11_ReadMe#readme"
+}
