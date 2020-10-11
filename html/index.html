@@ -11,31 +11,39 @@
 </head>
 <body class="background">
     <header>
-        <h1 class="titulo">README</h1>
-        <i  class="fas fa-bars miClase" ></i> 
-       <section>
-             <form action="#" method="POST"></i></form>
+    
+    <article style = "float: left inline-start"><h1 class="titulo" >README</h1></article>
+      <article style = "float: left"><i  class="fas fa-bars miClase" ></i> </article>
+       
+       
+             <form action="#" method="POST"></form>
              <label for="busqueda"><i class="fas fa-search miClase"></i></label>
              <input type="text" id="busqueda" name="busqueda" placeholder="buscar">
-   </section>
+      
         <div class="tituloderecha">
-            <article><a href="/login">iniciar sesión</a></article>
-           <article> <a href="/Register">Registrarse</a></article>
+            <article style = "float: right" ><a href="/login"><p class="destacadoSinCentrar">iniciar sesión</p></a></article>
+           <article style="float: right;"> <a href="/Register"><p class="destacadoSinCentrar">Registrarse</p></a></article><br>
         </div>
     </header>
     <main>
        <div> <h2 class="destacado">¿Quienes somos?</h2>
             <p class="texto">Readme es un E-comerce que acompaña a nuestros clientes el el proceso de aprendizaje <br>
-                brindandole libros por categoria y foros de discusión para debatir sobre temas especificos
-            </p><a href="#">leer más</a>
+                brindandole libros por categoria y foros de discusión para debatir sobre temas especificos 
+                  <details > 
+                      <summary class="destacado">Leer mas </summary>
+                      <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis ducimus, fugiat accusamus exercitationem in voluptates sequi.<br>
+                         Modi necessitatibus culpa, nobis animi temporibus dicta officia reiciendis mollitia praesentium ipsam repellendus quis!</p>
+                    </details>
         </div>
             <div class="destacado">
                 <p >Destacados</p>
-                <article><img src="img/html.png" alt="introducción a html"><br>Programación</article>
-                <article><img src="" alt=""></article>
-                <article><img src="" alt=""></article>
-                <article><img src="" alt=""></article>
-               
+                <section >
+                <article style = "float: left" ><img class="libro" src="img/html.png" alt="introducción a html"><br>Programación</article>
+                <article style = "float: left"><img class="libro" src="img/cocina.jpg" alt="bienvenidos a la cocina"><br>Cocina</article>
+                <article style = "float: left" ><img class="libro" src="img/cuadernodeciencia.jpg" alt="Cuaderno de ciencia"><br>ciencia</article>
+                <article  style = "float: left"><img class="libro" src="img/starwars.jpg" alt="star wars"><br>Ciencia Ficción</article>
+                <article  style = "float: left"><img class="libro" src="img/caperucitaroja.jpg" alt="Caperucita roja"><br>Niños</article>
+                </section>
             </div>
 
     </main>

@@ -18,6 +18,7 @@
 
  .miClase{
      font-size: 26px;
+     margin: 5px;
  }
 
 
@@ -31,4 +32,15 @@
     font-family: 'Mulish', sans-serif;
     font-weight: 200;
     text-align: center;
+ }
+
+ .libro{
+     width: 200px;
+     height: 280px;
+     margin: 35px;
+ }
+ .destacadoSinCentrar{
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    margin: 5px;
  }
