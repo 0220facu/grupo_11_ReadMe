@@ -1,4 +1,5 @@
 .titulo{
+    width: 70%;
     font-family: 'Lato', sans-serif;
     color: rgb(73, 115, 139);
     text-align: center;
@@ -35,12 +36,30 @@
  }
 
  .libro{
-     width: 200px;
-     height: 280px;
-     margin: 35px;
+     width: 20%;
+     height: 300px;
+     margin: 40px;
+     border-radius: 10px;
+     padding: 10px;
+     padding-bottom: 30px ;
+     background-color: white;
+     
+     
  }
  .destacadoSinCentrar{
     font-family: 'Mulish', sans-serif;
     font-weight: 600;
     margin: 5px;
+ }
+
+ .destacadoflex{
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    
+ }
+ .total{
+    width: 100%;
+     height: 100%;
  }
