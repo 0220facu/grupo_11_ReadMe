@@ -2,13 +2,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Admin</title>
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
 <body>
-    <header></header>
-    <main></main>
+    <header class="background">
+        <h1 class="titulo">README</h1>
+        <i  class="fas fa-bars miClase" ></i> 
+       <section>
+             <form action="#" method="POST"></i></form>
+             <label for="busqueda"><i class="fas fa-search miClase"></i></label>
+             <input type="text" id="busqueda" name="busqueda" placeholder="buscar">
+   </section>
+        <div class="titulo">
+            <article><a href="/login">iniciar sesión</a></article>
+           <article> <a href="/Register">Registrarse</a></article>
+        </div>
+    </header>
+    <main>
+        <div class="background">
+            <h2>Libros disponibles</h2>    
+                <section class="destacadoflex" >
+                <article class="libro" ><img class="total" src="img/html.png" alt="introducción a html">Introducción a Html</Html></article>
+                <article class="libro" ><img class="total" src="img/cocina.jpg" alt="bienvenidos a la cocina">Bienvenidos a la Cocina</article>
+                <article class="libro" ><img class="total" src="img/cuadernodeciencia.jpg" alt="Cuaderno de ciencia">"Cuaderno de ciencia"</article>
+                <article class="libro" ><img class="total" src="img/starwars.jpg" alt="star wars">"star wars"</article>
+                <article class="libro" ><img class="total" src="img/caperucitaroja.jpg" alt="Caperucita roja">"Caperucita roja"</article>
+                </section>
+            </div>
+            <div class="background">
+                <h2>Agregar nuevo libro</h2>    <br>
+                <section class="destacado">
+                    <form action="resultado.html" method="POST">
+                        <p>
+                          <label>Título del libro:</label>
+                          <input type="text" name="nombre" required>
+                        </p>
+                  
+                        <p>
+                            <label>Escritor:</label>
+                            <input type="text" name="nombre" required>
+                          </p>
+                  
+                          <p>
+                            <label>Editorial:</label>
+                            <input type="text" name="nombre" required>
+                          </p>
+                  
+                          <p>
+                            <label>Categoría</label>
+                            <input type="text" name="nombre" required>
+                          </p>
+                  
+                          <p>
+                            <label>Año de publicación:</label>
+                            <input type="text" name="nombre" required>
+                          </p>
+                    
+                          <p>
+                            <label>Cantidad de páginas:</label>
+                            <input type="text" name="nombre" required>
+                          </p>
+
+                          <p>
+                            <label>Idioma:</label>
+                            <input type="text" name="nombre" required>
+                          </p>
+
+                          <label>Género : </label>
+                          <select name="mes" id="">
+                              <option value="1">Programación</option>
+                              <option value="2">Cocina</option>
+                              <option value="3">Ciencia</option>
+                              <option value="4">Drama</option>
+                              <option value="5">Ciencia ficción</option>
+                              <option value="6">Arte</option>
+                          </select> <br><br>
+
+                          <label>Sinopsis</label> <br>
+                          <textarea name="comentario" id="" cols="100" rows="10" > </textarea>
+
+                        <p>
+                               <input type="submit"  value="Enviar">
+                        </p>    <br>
+                      </form>
+                </section>
+                  
+                </div>
+
+    </main>
     <footer></footer>
 </body>
 </html>
