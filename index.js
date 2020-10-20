@@ -21,3 +21,6 @@ app.get('/register', (req,res) => {
 app.get('/carrito', (req,res) => {
     res.sendFile(__dirname + '/html/carrito.html');
 });
+app.get('/admin', (req,res) => {
+    res.sendFile(__dirname + '/html/admin.html');
+});

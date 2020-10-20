@@ -1,15 +1,53 @@
 .titulo{
-   width: 70%;
+  
    font-family: 'Lato', sans-serif;
    color: rgb(73, 115, 139);
-   text-align: center;
-  
+   flex-grow: 1;
+
+}
+.login{
+   border-radius: 3px;
+   border: 0px;
+   color: white;
+   background-color: ;
+   margin-right:10vw ;
+   
+}
+.ingresar{
+   font-family: 'Lato', sans-serif;
+   color: rgb(73, 115, 139); 
+   display: flex;
+   width: 20vw;
 }
 .tituloderecha{
    font-family: 'Lato', sans-serif;
    color: rgb(73, 115, 139);
    text-align: right;
   
+}
+@media (max-width: 700px){
+   .ingresar{flex-direction: column;}
+    .register{}   
+   .login{
+      margin-right: 0vw;
+   }
+
+    .buscar{
+       display: none;
+    }
+}
+.izquierda{
+  width: 20vw ;
+  display: flex;
+  justify-content: space-between;
+}
+.header{
+   height: 50px;
+   font-family: 'Mulish', sans-serif;
+   font-weight: 600;
+   display: flex;
+   text-align: center;
+   
 }
 .background{
    background-color: rgba(127, 155, 186, 0.3);
@@ -18,8 +56,10 @@
 
 
 .miClase{
-    font-size: 26px;
-    margin: 5px;
+   margin-top: 10px;
+   margin-left: 10px;
+   font-size: 26px;
+  
 }
 
 
@@ -36,8 +76,8 @@
 }
 
 .libro{
-    width: 230px;
-    height: 350px;
+    width: 15vw;
+    height: 49vh;
     border-radius: 10px;
     padding: 10px;
     padding-bottom: 30px ;
@@ -55,10 +95,9 @@
 .destacadoflex{
    font-family: 'Mulish', sans-serif;
    font-weight: 600;
-   text-align: center;
    display: flex;
-   flex-wrap: wrap;
    justify-content: space-between;
+   flex-wrap: wrap;  
    
 }
 .total{
@@ -88,18 +127,22 @@
   font-weight: 400;
    color: rgb(0, 0, 0);
    font-size: 45px;
-   margin-left: 50px;  
+   margin-left: 10px;  
+   margin-top: 10px;  
    font-style: italic;
     
 }
 
 .descripcionarticulo{
-   height: 500px;
-   width: 600px;
-   margin-left: 30px;
-   margin-top: 0px;
+   height: 450px;
+   width: 500px;
+   padding-left: 10px;
+   padding-right: 10px;
    margin-left: 40px;
+   margin-top: 20px;
    margin-right: 20px;
+   border: gray 2px solid;
+   border-radius: 10px;
 }
 .precioarticulo{
    font-size: 37px;
@@ -116,3 +159,38 @@
      text-align: justify;
   }
  
+  .carritos{width: 20%;
+   height: 300px;
+   margin: 40px;
+   border-radius: 10px;
+   padding: 10px;
+   padding-bottom: 30px ;}
+
+   .libro2{
+      width: 10%;
+      height: 150px;
+      margin: 20px;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: white;
+   }
+
+   .destacadoflex2{
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+   }
+    .background2{
+      background-color: rgba(13, 57, 107, 0.534);}
+
+      .boton
+      {border-radius: 3px;
+      width: 100%;
+      padding: 10px;
+      margin: 20px auto;
+      border: 0px;
+      color: white;
+      background-color: #0044AA;}
+
+      
