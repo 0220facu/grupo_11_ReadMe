@@ -35,43 +35,46 @@
                 <h2>Agregar nuevo libro</h2>    <br>
                 <section class="destacado">
                     <form action="resultado.html" method="POST">
-                        <p>
-                          <label>Título del libro:</label>
-                          <input type="text" name="nombre" required>
+                        <article><p>
+                          <label for="titulo">Título del libro:</label>
+                          <input type="text" name="titulo" id="titulo" required>
                         </p>
-                  
+                      </article>
+                    <article>  
+                      <p>
+                            <label for="nombre"> Escritor:</label>
+                            <input type="text" name="nombre"  id="nombre" required >
+                          </p>
+                        </article>
+                          
+                      <article><p>
+                            <label for="editorial">Editorial:</label>
+                            <input type="text" name="editorial" id="editorial" required>
+                          </p>
+                        </article>
+                      <article>  
                         <p>
-                            <label>Escritor:</label>
-                            <input type="text" name="nombre" required>
+                            <label for="categoria">Categoría</label>
+                            <input type="text" name="nombre" id="Categoría"required>
                           </p>
-                  
-                          <p>
-                            <label>Editorial:</label>
-                            <input type="text" name="nombre" required>
+                        </article>
+                      <article> <p>
+                            <label for="año">Año de publicación:</label>
+                            <input type="text" name="año" id="año" required>
                           </p>
-                  
+                        </article>
                           <p>
-                            <label>Categoría</label>
-                            <input type="text" name="nombre" required>
-                          </p>
-                  
-                          <p>
-                            <label>Año de publicación:</label>
-                            <input type="text" name="nombre" required>
-                          </p>
-                    
-                          <p>
-                            <label>Cantidad de páginas:</label>
-                            <input type="text" name="nombre" required>
+                            <label for="paginas">Cantidad de páginas:</label>
+                            <input type="text" name="paginas" id="paginas" required>
                           </p>
 
                           <p>
-                            <label>Idioma:</label>
-                            <input type="text" name="nombre" required>
+                            <label for="idioma">Idioma:</label>
+                            <input type="text" name="idioma" id="idioma"required>
                           </p>
 
-                          <label>Género : </label>
-                          <select name="mes" id="">
+                          <label for="genero">Género : </label>
+                          <select name="genero" id="genero">
                               <option value="1">Programación</option>
                               <option value="2">Cocina</option>
                               <option value="3">Ciencia</option>
@@ -80,8 +83,8 @@
                               <option value="6">Arte</option>
                           </select> <br><br>
 
-                          <label>Sinopsis</label> <br>
-                          <textarea name="comentario" id="" cols="100" rows="10" > </textarea>
+                          <label for="sinopsis">Sinopsis</label> <br>
+                          <textarea name="sinopsis" id="sinopsois" cols="100" rows="10" > </textarea>
 
                         <p>
                                <input type="submit"  value="Enviar">
