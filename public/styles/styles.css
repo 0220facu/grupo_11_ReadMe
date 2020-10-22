@@ -18,6 +18,11 @@
    width: 25vw;
    justify-content: space-between;
 }
+
+.nada{
+   font-style: normal;
+   text-decoration: none;
+}
 .tituloderecha{
    font-family: 'Lato', sans-serif;
    color: rgb(73, 115, 139);
@@ -189,13 +194,14 @@
       padding: 10px;
       margin: 20px auto;
       border: 0px;
-      color: white;
-      background-color: #0044AA;}
+      color: black;
+      background-color: #78B38A;}
 
      .contenedordetexto{
       width: 20vw;
       border-radius: 3px;  
       padding: 10px;
+      margin-top: 10px;
       border: black 1px solid;
    }
    .contenedorflex{
@@ -205,6 +211,7 @@
       margin-left: auto;
       margin-right: auto;
       margin-top: 100px;
+      flex-wrap: wrap;
    }
 
       .boton2
@@ -239,3 +246,4 @@
    padding: 10px;
    border: black 1px solid;
 }
+
