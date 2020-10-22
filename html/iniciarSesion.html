@@ -7,37 +7,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
 <body class="background">
-    <header     >
-        <h1 class="titulo">README</h1>
-        <i  class="fas fa-bars miClase" ></i> 
-       <section>
-             <form action="#" method="POST"></i></form>
-             <label for="busqueda"><i class="fas fa-search miClase"></i></label>
-             <input type="text" id="busqueda" name="busqueda" placeholder="buscar">
-   </section>
-        <div class="titulo">
-            <article><a href="/login">iniciar sesión</a></article>
-           <article> <a href="/Register">Registrarse</a></article>
-        </div>
+    <header>
+        <div class="header">
+        <section class="izquierda">
+            <article><i  class="fas fa-bars miClase"></i> </article> 
+            <article class="buscar"><form action="#" method="POST"></form>
+            <label for="busqueda"><i class="fas fa-search miClase"></i></label>
+            <input type="text" class="busqueda" id="busqueda" name="busqueda" placeholder="buscar" height="20px"></article></section>
+       <article class="titulo"> <h1 >README</h1></article>
+        <section class="ingresar">
+            <article class="login"><a  href="/login" ><p class="boton3">iniciar sesión</p></a></article>
+            <article> <a  href="/Register" ><p class="boton3">Registrarse</p></a></article>
+        </section>
+    </div>
     </header>
     <main>
-        <div class="container-registro">
-            <form action="index.html" method="POST"> 
-            <div class="username">
-                <label for="username">nombre</label>
-                <input type="text" name="username" id="username" placeholder="Nombre de usuario">
-            </div>
-            <div class="password">
-                <label for="password">contraseña</label>
-            <input type="password" name="password" id="password-1" placeholder="Ingresa tu clave">
-            <div class="button">
-                <button type="submit">Confirmar</button>
-            </div>
-            <div class="button">
-                <button type="submit">Olvide mi clave</button>
-            </div>
-    
-    
+        <div class=""><form action="index.html" method="POST">
+            <div class="contenedorflex">
+             <article class="">
+                <label for="username" class="destacadosincentrar">nombre</label>
+                <input type="text" class="contenedordetexto" name="username" id="username" placeholder="Nombre de usuario">
+            </article>
+            <article class="">
+                <label for="password" class="destacadosincentrar">contraseña</label>
+            <input type="password" class="contenedordetexto" name="password" id="password-1" placeholder="Ingresa tu clave">
+            </article>
+        </div>
+                <div class="contenedorbotones">
+            <article>
+                <button  class="boton2" type="submit">Confirmar</button>
+            </article>
+            <article>
+                <button class="boton2" type="submit">Olvide mi clave</button>
+            </article>
+                </div></form>
+    </div>
     </main>
     <footer></footer>
 </body>
