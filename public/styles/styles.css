@@ -171,7 +171,7 @@
       margin: 20px;
       border-radius: 10px;
       padding: 10px;
-      background-color: white;
+       background-color: white;
    }
 
    .destacadoflex2{
@@ -202,6 +202,9 @@
       display: flex;
       width: 60vw;
       justify-content: space-between;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 100px;
    }
 
       .boton2
@@ -212,15 +215,24 @@
       color: black;
       border-color: black;
       background-color: #78B38A;}
-.boton3
-{border-radius: 3px;
-width: 10vw;
-padding: 10px;
-border: 2px solid;
-color: black;
-background-color: #78B38A;}
+      
+      .boton3
+      {border-radius: 3px;
+      width: 10vw;
+      padding: 10px;
+      border: 2px solid;
+      color: black;
+      background-color: #78B38A;}
       
 
+.contenedorbotones      {
+         display: flex;
+         width: 100vw;
+         justify-content: center;
+         margin-left: auto;
+         margin-right: auto;
+         margin-top: 100px;
+}
 .busqueda{
    width: 10vw;
    border-radius: 3px;  
