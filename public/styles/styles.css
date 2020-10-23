@@ -38,7 +38,32 @@
     .buscar{
        display: none;
     }
-}
+    .articulocarrito{
+      margin-top: 50px;
+      width: 100%;
+      height: 40vh;
+      border: black 3px solid;
+      display: flex;
+      flex-direction: row
+   }
+   .imagencarrito{
+    height: 90%;
+    width: 50%;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+   position: relative;
+   }
+   
+   .eliminararticulo{
+      margin-left: 50%;
+      margin-right: 10px;
+      margin-bottom: auto;
+      margin-top: auto;
+      
+      
+   }
+   }
 .izquierda{
   width: 25vw ;
   display: flex;
@@ -247,3 +272,34 @@
    border: black 1px solid;
 }
 
+.contenedorcolumna{
+   display: flex;
+   flex-direction: column;
+}
+@media(min-width:700px){
+.imagencarrito{
+   height: 94%;
+   width: 16%;
+   margin-left: 20px;
+   margin-top: auto;
+   margin-bottom: auto;
+  position: relative;
+  }
+}
+.articulocarrito{
+   width: 100%;
+   height: 40vh;
+   border: black 3px solid;
+   display: flex;
+   flex-direction: row
+}
+
+
+.eliminararticulo{
+   margin-left: 50%;
+   margin-right: 10px;
+   margin-bottom: auto;
+   margin-top: auto;
+   
+   
+}
