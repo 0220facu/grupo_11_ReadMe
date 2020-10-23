@@ -6,95 +6,83 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
-<body>
-    <header class="background">
-        <h1 class="titulo">README</h1>
-        <i  class="fas fa-bars miClase" ></i> 
-       <section>
-             <form action="#" method="POST"></i></form>
-             <label for="busqueda"><i class="fas fa-search miClase"></i></label>
-             <input type="text" id="busqueda" name="busqueda" placeholder="buscar">
-   </section>
-        <div class="titulo">
-            <article><a href="/login">iniciar sesión</a></article>
-           <article> <a href="/Register">Registrarse</a></article>
-        </div>
-    </header>
-    <main>
-        <div class="background">
-            <h2>Libros disponibles</h2>    
-                <section class="destacadoflex" >
-                <article class="libro" ><img class="total" src="img/html.png" alt="introducción a html">Introducción a Html</Html></article>
-                <article class="libro" ><img class="total" src="img/cocina.jpg" alt="bienvenidos a la cocina">Bienvenidos a la Cocina</article>
-                <article class="libro" ><img class="total" src="img/cuadernodeciencia.jpg" alt="Cuaderno de ciencia">"Cuaderno de ciencia"</article>
-                <article class="libro" ><img class="total" src="img/starwars.jpg" alt="star wars">"star wars"</article>
-                <article class="libro" ><img class="total" src="img/caperucitaroja.jpg" alt="Caperucita roja">"Caperucita roja"</article>
-                </section>
-            </div>
-            <div class="background">
-                <h2>Agregar nuevo libro</h2>    <br>
-                <section class="destacado">
-                    <form action="resultado.html" method="POST">
-                        <article><p>
-                          <label for="titulo">Título del libro:</label>
-                          <input type="text" name="titulo" id="titulo" required>
-                        </p>
-                      </article>
-                    <article>  
-                      <p>
-                            <label for="nombre"> Escritor:</label>
-                            <input type="text" name="nombre"  id="nombre" required >
-                          </p>
-                        </article>
-                          
-                      <article><p>
-                            <label for="editorial">Editorial:</label>
-                            <input type="text" name="editorial" id="editorial" required>
-                          </p>
-                        </article>
-                      <article>  
-                        <p>
-                            <label for="categoria">Categoría</label>
-                            <input type="text" name="nombre" id="Categoría"required>
-                          </p>
-                        </article>
-                      <article> <p>
-                            <label for="año">Año de publicación:</label>
-                            <input type="text" name="año" id="año" required>
-                          </p>
-                        </article>
-                          <p>
-                            <label for="paginas">Cantidad de páginas:</label>
-                            <input type="text" name="paginas" id="paginas" required>
-                          </p>
-
-                          <p>
-                            <label for="idioma">Idioma:</label>
-                            <input type="text" name="idioma" id="idioma"required>
-                          </p>
-
-                          <label for="genero">Género : </label>
-                          <select name="genero" id="genero">
-                              <option value="1">Programación</option>
-                              <option value="2">Cocina</option>
-                              <option value="3">Ciencia</option>
-                              <option value="4">Drama</option>
-                              <option value="5">Ciencia ficción</option>
-                              <option value="6">Arte</option>
-                          </select> <br><br>
-
-                          <label for="sinopsis">Sinopsis</label> <br>
-                          <textarea name="sinopsis" id="sinopsois" cols="100" rows="10" > </textarea>
-
-                        <p>
-                               <input type="submit"  value="Enviar">
-                        </p>    <br>
-                      </form>
-                </section>
-                  
-                </div>
-
-    </main>
-    <footer></footer>
+<body class="background">
+  <header>
+    <div class="header">
+    <section class="izquierda">
+        <article><i  class="fas fa-bars miClase"></i> </article> 
+        <article class="buscar"><form action="#" method="POST"></form>
+        <label for="busqueda"><i class="fas fa-search miClase"></i></label>
+        <input type="text" class="busqueda" id="busqueda" name="busqueda" placeholder="buscar" height="20px"></article></section>
+   <article class="titulo"> <a class="nada" href="/"><h1 >README</h1></a></article>
+    <section class="ingresar">
+        <article class="login"><a  href="/login" ><p class="boton3">iniciar sesión</p></a></article>
+        <article> <a  href="/Register" ><p class="boton3">Registrarse</p></a></article>
+    </section>
+</div>
+</header>
+<main>
+<div>
+<h2>Libros disponibles</h2>    
+  <section class="destacadoflex" >
+  <article class="libro" ><img class="total" src="img/html.png" alt="introducción a html">Introducción a Html</Html></article>
+  <article class="libro" ><img class="total" src="img/cocina.jpg" alt="bienvenidos a la cocina">Bienvenidos a la Cocina</article>
+  <article class="libro" ><img class="total" src="img/cuadernodeciencia.jpg" alt="Cuaderno de ciencia">"Cuaderno de ciencia"</article>
+  <article class="libro" ><img class="total" src="img/starwars.jpg" alt="star wars">"star wars"</article>
+  <article class="libro" ><img class="total" src="img/caperucitaroja.jpg" alt="Caperucita roja">"Caperucita roja"</article>
+  </section>
+</div>
+<h2 class="destacado">Agregar nuevo libro</h2>
+<form action="resultado.html" method="POST"></form>    
+<section class="contenedorflex">  
+<article>
+    <label class="destacadosincentrar" for="titulo">Título del libro:</label>
+      <input type="text" class="contenedordetexto" name="titulo" id="titulo" required>
+  </article>
+<article> 
+    <label class="destacadosincentrar" for="nombre"> Escritor:</label>
+    <input type="text" name="nombre" class="contenedordetexto" id="nombre" required >
+</article>
+<article>
+  <label class="destacadosincentrar" for="editorial">Editorial:</label>
+  <input type="text" name="editorial" class="contenedordetexto" id="editorial" required>
+</article>
+<article> 
+  <label class="destacadosincentrar" for="categoria">Categoría</label>
+  <input type="text" name="nombre"class="contenedordetexto" id="Categoría"required>
+</article>
+<article> 
+  <label class="destacadosincentrar" for="año">Año de publicación:</label>
+  <input type="text" name="año"class="contenedordetexto" id="año" required>
+</article>
+<article>
+  <label class="destacadosincentrar" for="paginas">Cantidad de páginas:</label>
+  <input type="text" name="paginas"class="contenedordetexto" id="paginas" required>
+</article>
+<article>
+  <label class="destacadosincentrar" for="idioma">Idioma:</label>
+  <input type="text" name="idioma"class="contenedordetexto" id="idioma"required>
+</article>
+<article>
+  <label class="destacadosincentrar" for="genero">Género : </label>
+  <select name="genero"class="contenedordetexto" id="genero">
+    <option value="1">Programación</option>
+    <option value="2">Cocina</option>
+    <option value="3">Ciencia</option>
+    <option value="4">Drama</option>
+    <option value="5">Ciencia ficción</option>
+    <option value="6">Arte</option>
+    </select>
+  </article>    
+<article>
+  <label class="destacadosincentrar" for="sinopsis">Sinopsis</label> <br>
+  <textarea name="sinopsis" id="sinopsois" cols="60" rows="7" > </textarea>
+  </section>
+<article class="contenedorbotones">
+  <input type="submit" class="boton3" value="Enviar">
+</article>
+</form>
+</main>
+<footer></footer>
 </body>
 </html>
