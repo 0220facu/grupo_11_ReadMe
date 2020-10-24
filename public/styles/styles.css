@@ -15,7 +15,7 @@
    font-family: 'Lato', sans-serif;
    color: rgb(73, 115, 139); 
    display: flex;
-   width: 25vw;
+   width: 30vw;
    justify-content: space-between;
 }
 
@@ -198,7 +198,7 @@ flex-direction: column;}
 }
 .background{
    background-color: rgba(127, 155, 186, 0.3);
-   
+  
 }
 
 
@@ -396,7 +396,7 @@ flex-direction: column;}
   }
   .boton3
   {border-radius: 3px;
-  width: 14vw;
+  width: 13vw;
   padding: 10px;
   border: 2px solid;
   color: black;
@@ -415,7 +415,7 @@ flex-direction: column;}
   
 }
   .izquierda{
-   width: 25vw ;
+   width: 30vw ;
    display: flex;
    justify-content: space-between;
  }
