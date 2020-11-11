@@ -1,5 +1,6 @@
+[
 {
-    
+    "id" : "1" ,
     "titulo": "Caperucita Roja",
     "año de publicacion": "1990",
     "editorial":  "Ledesma",
@@ -7,9 +8,13 @@
     "sinopsis": "Una niña vestida de rojo es interceptada por un lobo malvado camino a la casa de su abuela",
     "escritor":  "Charles Perrault",
     "categoria":  "Niños",
-    "paginas": "260"
-    } 
- {   
+    "paginas": "260",
+    "destacado" : "si",
+    "img": "caperucitaroja.jpg"
+
+},
+{
+    "id" : "2",
     "titulo": "Master Cheff"      ,
     "año de publicacion": "2020" ,
     "editorial": "Planeta",
@@ -17,10 +22,12 @@
     "sinopsis": "Guias paso a paso para aprender a cocinar junto con uno de los Cheff mas reconocidos de la Argentina",
     "escritor": "Ariel Rodriguez Palacios",
     "categoria": "Cocina",
-    "paginas": "95"
-    },
-
+    "paginas": "95",
+    "destacado" : "si",
+    "img": "cocina.jpg"
+ },
 {
+    "id" : "3",
     "titulo": "Astronomia para princiantes",
     "año de publicacion": "2015",
     "editorial": "Planeta",
@@ -29,9 +36,11 @@
     "escritor": "Carl Sagan",
     "categoria": "Ciencia",
     "paginas": "360",
+    "destacado" : "no",
+    "img": "cuadernodeciencia.jpg"
     },
-
 {
+    "id" : "4",
     "titulo": "Html y Css",
     "año de publicacion": "2009",
     "editorial": "Digital House",
@@ -40,9 +49,11 @@
     "escritor": "Matt Thomas",
     "categoria": "Programacion",
     "paginas": "89",
-    },
-    
-{
+    "destacado" : "no",
+    "img": "html.png"   
+},
+    {
+    "id" : "5",
     "titulo": "Star Wars",
     "año de publicacion": "1998",
     "editorial": "Planeta Comic",
@@ -51,8 +62,10 @@
     "escritor": "George Lucas",
     "categoria": "Ciencia Ficcion",
     "paginas": "579",
-    },
-}
+    "destacado" : "si",
+    "img": "starwars.jpg"
+    }
 
+]
 
  
