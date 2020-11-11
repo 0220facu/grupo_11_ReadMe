@@ -1,3 +1,4 @@
+[
 {
     
     "titulo": "Caperucita Roja",
@@ -7,9 +8,10 @@
     "sinopsis": "Una niña vestida de rojo es interceptada por un lobo malvado camino a la casa de su abuela",
     "escritor":  "Charles Perrault",
     "categoria":  "Niños",
-    "paginas": "260"
-    } 
- {   
+    "paginas": "260",
+    "destacado" : "si"
+},
+{
     "titulo": "Master Cheff"      ,
     "año de publicacion": "2020" ,
     "editorial": "Planeta",
@@ -17,9 +19,9 @@
     "sinopsis": "Guias paso a paso para aprender a cocinar junto con uno de los Cheff mas reconocidos de la Argentina",
     "escritor": "Ariel Rodriguez Palacios",
     "categoria": "Cocina",
-    "paginas": "95"
-    },
-
+    "paginas": "95",
+    "destacado" : "si"
+ },
 {
     "titulo": "Astronomia para princiantes",
     "año de publicacion": "2015",
@@ -29,8 +31,8 @@
     "escritor": "Carl Sagan",
     "categoria": "Ciencia",
     "paginas": "360",
+    "destacado" : "si"
     },
-
 {
     "titulo": "Html y Css",
     "año de publicacion": "2009",
@@ -40,9 +42,9 @@
     "escritor": "Matt Thomas",
     "categoria": "Programacion",
     "paginas": "89",
+    "destacado" : "si"
     },
-    
-{
+    {
     "titulo": "Star Wars",
     "año de publicacion": "1998",
     "editorial": "Planeta Comic",
@@ -51,8 +53,9 @@
     "escritor": "George Lucas",
     "categoria": "Ciencia Ficcion",
     "paginas": "579",
-    },
-}
+    "destacado" : "si"
+    }
 
+]
 
  
