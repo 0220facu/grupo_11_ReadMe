@@ -9,7 +9,9 @@
     "escritor":  "Charles Perrault",
     "categoria":  "Niños",
     "paginas": "260",
-    "destacado" : "si"
+    "destacado" : "si",
+    "img": "caperucitaroja.jpg"
+
 },
 {
     "titulo": "Master Cheff"      ,
@@ -20,7 +22,8 @@
     "escritor": "Ariel Rodriguez Palacios",
     "categoria": "Cocina",
     "paginas": "95",
-    "destacado" : "si"
+    "destacado" : "si",
+    "img": "cocina.jpg"
  },
 {
     "titulo": "Astronomia para princiantes",
@@ -31,7 +34,8 @@
     "escritor": "Carl Sagan",
     "categoria": "Ciencia",
     "paginas": "360",
-    "destacado" : "si"
+    "destacado" : "si",
+    "img": "cuadernodecienci.jpg"
     },
 {
     "titulo": "Html y Css",
@@ -42,8 +46,9 @@
     "escritor": "Matt Thomas",
     "categoria": "Programacion",
     "paginas": "89",
-    "destacado" : "si"
-    },
+    "destacado" : "si",
+    "img": "html.png"   
+},
     {
     "titulo": "Star Wars",
     "año de publicacion": "1998",
@@ -53,7 +58,8 @@
     "escritor": "George Lucas",
     "categoria": "Ciencia Ficcion",
     "paginas": "579",
-    "destacado" : "si"
+    "destacado" : "si",
+    "img": "starwars.jpg"
     }
 
 ]
