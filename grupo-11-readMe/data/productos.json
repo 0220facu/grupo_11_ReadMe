@@ -1,6 +1,6 @@
 [
 {
-    
+    "id" : "1" ,
     "titulo": "Caperucita Roja",
     "año de publicacion": "1990",
     "editorial":  "Ledesma",
@@ -14,6 +14,7 @@
 
 },
 {
+    "id" : "2",
     "titulo": "Master Cheff"      ,
     "año de publicacion": "2020" ,
     "editorial": "Planeta",
@@ -26,6 +27,7 @@
     "img": "cocina.jpg"
  },
 {
+    "id" : "3",
     "titulo": "Astronomia para princiantes",
     "año de publicacion": "2015",
     "editorial": "Planeta",
@@ -34,10 +36,11 @@
     "escritor": "Carl Sagan",
     "categoria": "Ciencia",
     "paginas": "360",
-    "destacado" : "si",
-    "img": "cuadernodecienci.jpg"
+    "destacado" : "no",
+    "img": "cuadernodeciencia.jpg"
     },
 {
+    "id" : "4",
     "titulo": "Html y Css",
     "año de publicacion": "2009",
     "editorial": "Digital House",
@@ -46,10 +49,11 @@
     "escritor": "Matt Thomas",
     "categoria": "Programacion",
     "paginas": "89",
-    "destacado" : "si",
+    "destacado" : "no",
     "img": "html.png"   
 },
     {
+    "id" : "5",
     "titulo": "Star Wars",
     "año de publicacion": "1998",
     "editorial": "Planeta Comic",
