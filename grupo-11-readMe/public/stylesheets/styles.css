@@ -561,6 +561,10 @@ flex-direction: column;}
    text-decoration: none;
    color: #C7C7C7 ;
 }
+.links-footer{
+   text-decoration: none;
+   color: #C7C7C7;
+}
 
 @media screen and(max-width: 1100px){
    .container-body{
