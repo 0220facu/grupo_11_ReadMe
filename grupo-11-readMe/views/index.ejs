@@ -17,14 +17,14 @@
             <p >Destacados</p>    
                 <section class="destacadoflex" > 
                     <% for ( product of destacados) { %> 
-                <article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.categoria %> </article> <% } %> 
+               <a href="/articulo/<%= product.id %> "> <article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.categoria %> </article></a> <% } %> 
                 </section>
             </div>
         <div class="destacado">
             <p >Todos los Libros</p>    
                 <section class="destacadoflex" > 
                         <% for ( product of products) { %> 
-                    <article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.categoria %> </article> <% } %> 
+                            <a href="/articulo/<%= product.id %> "><article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.categoria %> </article></a> <% } %> 
                     </section>
                 </div>
         </div>

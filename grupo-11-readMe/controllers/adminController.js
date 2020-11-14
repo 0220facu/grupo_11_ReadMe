@@ -33,6 +33,7 @@ const controller = {
         escritor: req.body.escritor,
         categoria: req.body.genero,
         paginas: req.body.paginas, 
+        precio: req.body.precio, 
         destacado: req.body.destacado == undefined ? "No" : req.body.destacado ,
         img: ""
           }

@@ -9,6 +9,7 @@
   "escritor": "Charles Perrault",
   "categoria": "Niños",
   "paginas": "260",
+  "precio": 1000 ,
   "destacado": "si",
   "img": "caperucitaroja.jpg"
  },
@@ -22,6 +23,7 @@
   "escritor": "Ariel Rodriguez Palacios",
   "categoria": "Cocina",
   "paginas": "95",
+  "precio": 5000 ,
   "destacado": "si",
   "img": "cocina.jpg"
  },
@@ -35,6 +37,7 @@
   "escritor": "Carl Sagan",
   "categoria": "Ciencia",
   "paginas": "360",
+  "precio": 9500 ,
   "destacado": "no",
   "img": "cuadernodeciencia.jpg"
  },
@@ -48,6 +51,7 @@
   "escritor": "Matt Thomas",
   "categoria": "Programacion",
   "paginas": "89",
+  "precio": 3500 ,
   "destacado": "no",
   "img": "html.png"
  },
@@ -61,6 +65,7 @@
   "escritor": "George Lucas",
   "categoria": "Ciencia Ficcion",
   "paginas": "579",
+  "precio": 7500 ,
   "destacado": "si",
   "img": "starwars.jpg"
  }

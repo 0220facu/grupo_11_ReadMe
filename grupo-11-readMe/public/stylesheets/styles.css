@@ -53,13 +53,15 @@ margin-right: auto;}
    }
    
    .precioarticulo{
-      font-size: 20px;
+      font-size: 0px;
       font-family: 'Mulish', sans-serif;
       font-weight: 200;
       color: black;
       font-style: italic;
       margin-left:40px;
      margin-top: 0px;
+     color: green;
+
      }
    .titulolibro{
       font-family: 'Mulish', sans-serif;
@@ -102,6 +104,7 @@ flex-direction: column;}
       margin-left:auto;
       margin-right: auto;
       flex-direction: column;
+      text-align: center;
    }
   
    .izquierda{
@@ -350,22 +353,23 @@ flex-direction: column;}
    }
    
    .precioarticulo{
-      font-size: 20px;
+      font-size: 30px;
       font-family: 'Mulish', sans-serif;
       font-weight: 200;
       color: black;
       font-style: italic;
       margin-left:55px;
      margin-top: 0px;
+     color: green;
      }
    .titulolibro{
       font-family: 'Mulish', sans-serif;
-      font-weight: 200;
+      font-weight: 800;
       width: 100%;
        color: rgb(0, 0, 0);
        font-size: 45px;
        margin-left: 10px;  
-       margin-top: 10px;  
+       margin-top: 25px;  
        font-style: italic;
         font-size: 20px;
     }
@@ -373,11 +377,11 @@ flex-direction: column;}
       font-family: 'Mulish', sans-serif;
       font-weight:200 ;
       text-align: justify;
-  font-size:  14px;
+  font-size:  18px;
    }
    .descripcionarticulo{
       height: 88%;
-      width: 60%;
+      width: 44%;
       padding-left: 10px;
       padding-right: 10px;
       margin-left: 40px;
@@ -394,6 +398,7 @@ flex-direction: column;}
       background-color: white;
       margin-left:auto;
       margin-right: auto;
+      text-align: center;
    }
    .imagencarrito{
    height: 94%;
@@ -463,4 +468,20 @@ flex-direction: column;}
 .sinDecoracion{
    text-decoration:none
 
+}
+.boton
+      {border-radius: 3px;
+      width: 100%;
+      padding: 10px;
+      margin: 20px auto;
+      border: 0px;
+      color: black;
+      padding: 30px;
+      background-color: #78B38A;
+   margin-bottom: 10px;
+margin-top: 30px;}
+.cantidadlibros{
+   height: 20px;
+   width: 40px;
+   margin-top: 40px;
 }
