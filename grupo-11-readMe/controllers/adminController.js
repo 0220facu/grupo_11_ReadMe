@@ -35,8 +35,8 @@ const controller = {
         paginas: req.body.paginas, 
         precio: req.body.precio, 
         destacado: req.body.destacado == undefined ? "No" : req.body.destacado ,
-        img: ""
-          }
+        img: req.files[0].filename}
+          
           const products = getAllProducts();
 		const productsToSave = [...products, newProduct];
         writeProducts(productsToSave);

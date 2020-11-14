@@ -12,11 +12,15 @@
   </div>
 </div>
 <h2 class="destacado">Agregar nuevo libro</h2>
-<form action="/admin/crear" method="POST">   
+<form action="/admin/crear" method="POST" enctype="multipart/form-data">   
 <section class="contenedorflex">  
 <article>
     <label class="destacadosincentrar" for="titulo">Título del libro:</label>
       <input type="text" class="contenedordetexto" name="titulo" id="titulo" required>
+  </article>
+  <article>
+    <label for="img" class="destacadosincentrar">Imagen:</label>
+    <input type="file"class="contenedordetexto" name="img" id=img>
   </article>
 <article> 
     <label class="destacadosincentrar" for="nombre"> Escritor:</label>
@@ -38,6 +42,7 @@
   <label class="destacadosincentrar" for="precio">precio:</label>
   <input type="number" name="precio"class="contenedordetexto" id="precio" required>
 </article>
+
 <article>
   <label class="destacadosincentrar" for="idioma">Idioma:</label>
   <input type="text" name="idioma"class="contenedordetexto" id="idioma"required>
