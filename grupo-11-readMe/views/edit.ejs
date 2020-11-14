@@ -1,0 +1,66 @@
+<html lang="en">
+  <%- include('partials/header') %>
+<main>
+<div>
+  <div class="destacado">
+    <p >seleccione libro para editar</p>    
+        <section class="destacadoflex" > 
+                <% for ( product of products) { %> 
+            <a class="sinDecoracion" href="/admin/edit/<%=product.id%>"><article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.titulo %> </article> <% } %></a> 
+            </section>
+        </div>
+
+  </div>
+</div>
+<h2 class="destacado">estas editando el libro: <%=product.titulo%></h2>
+<form action="/admin/edit/<%=product.id%>" method="POST">   
+<section class="contenedorflex">  
+<article>
+    <label class="destacadosincentrar" for="titulo">Título del libro:</label>
+      <input type="text" class="contenedordetexto" name="titulo" id="titulo"value<%= productoParaEditar.titulo %> required>
+  </article>
+<article> 
+    <label class="destacadosincentrar" for="nombre"> Escritor:</label>
+    <input type="text" name="escritor" class="contenedordetexto"value="<%= productoParaEditar.escritor %>" id="escritor" required >
+</article>
+<article>
+  <label class="destacadosincentrar" for="editorial">Editorial:</label>
+  <input type="text" name="editorial" class="contenedordetexto" id="editorial"value="<%= productoParaEditar.editorial %>" required>
+</article>
+<article> 
+  <label class="destacadosincentrar" for="año">Año de publicación:</label>
+  <input type="text" name="publicacion"class="contenedordetexto" id="publicacion"value="<%= productoParaEditar.publicacion %>" required>
+</article>
+<article>
+  <label class="destacadosincentrar" for="paginas">Cantidad de páginas:</label>
+  <input type="text" name="paginas"class="contenedordetexto" id="paginas"value="<%= productoParaEditar.paginas %>" required>
+</article>
+<article>
+  <label class="destacadosincentrar" for="idioma">Idioma:</label>
+  <input type="text" name="idioma"class="contenedordetexto" id="idioma"value="<%= productoParaEditar.idioma %>"required>
+</article>
+<article class="contenedordetexto" ><label class="destacadosincentrar" for="destacado"  > Destacar producto</label>
+  <input type="checkbox" id="destacado" name="destacado" <%= productoParaEditar.destacado == "si"?  "checked" : "" %> > </article>
+<article>
+  <label class="destacadosincentrar" for="categoria" >Género : </label>
+  <select name="categoria"class="contenedordetexto" value="<%= productoParaEditar.categoria %>"id="categoria">
+    <option value="Programación">Programación</option>
+    <option value="Cocina">Cocina</option>
+    <option value="Ciencia">Ciencia</option>
+    <option value="Drama">Drama</option>
+    <option value="Ciencia ficción">Ciencia ficción</option>
+    <option value="Arte">Arte</option>
+    </select>
+  </article>    
+<article>
+  <label class="destacadosincentrar" for="sinopsis">Sinopsis</label> <br>
+  <textarea name="sinopsis" id="sinopsis" cols="60" rows="7" ><%= productoParaEditar.sinopsis %> </textarea>
+  </section>
+<article class="contenedorbotones">
+  <button type="submit" class="boton3" >Enviar </button>
+</article>
+</form>
+</main>
+<footer></footer>
+</body>
+</html>

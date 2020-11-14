@@ -3,10 +3,10 @@
 <main>
 <div>
   <div class="destacado">
-    <p >Todos los Libros</p>    
+    <p >seleccione libro para editar</p>    
         <section class="destacadoflex" > 
                 <% for ( product of products) { %> 
-            <article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.categoria %> </article> <% } %> 
+            <a href="/admin/edit/<%=product.id%>"><article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.categoria %> </article> <% } %></a> 
             </section>
         </div>
   </div>

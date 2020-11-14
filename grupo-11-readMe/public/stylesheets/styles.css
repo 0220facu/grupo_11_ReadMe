@@ -111,14 +111,15 @@ flex-direction: column;}
     }
     .boton3
     {border-radius: 3px;
-    width: 14vw;
+    width: 16vw;
     padding: 10px;
     height: 29px;
     border: 2px solid;
     color: black;
     background-color: #78B38A;
    font-size: 12px;
-   text-decoration:none
+   text-decoration:none;
+   margin-top: 1px;
 }
     
     .miClase2{
@@ -409,7 +410,8 @@ flex-direction: column;}
   border: 2px solid;
   color: black;
   background-color: #78B38A;
-  text-decoration:none
+  text-decoration:none;
+  margin-left: 0px;
 }
   
   .miClase2{

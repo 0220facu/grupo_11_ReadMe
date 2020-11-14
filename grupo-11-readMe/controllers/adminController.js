@@ -41,6 +41,28 @@ const controller = {
         writeProducts(productsToSave);
         
         res.redirect('/');
-}  
+},
+editar: (req, res) => {
+    const id = req.params.id;
+    const products = getAllProducts();
+    const productoParaEditar = products.find((product) => {
+        return product.id == id
+    })
+    res.render('edit',{ products : products,productoParaEditar: productoParaEditar})
+},
+modificar: (req, res) =>{
+    const id = req.params.id;
+    const products = getAllProducts();
+    let productoEditado = products.map(product => {
+            if(product.id == id){
+                return reloj = req.body
+            }
+            return reloj
+    })
+    const productsToSave = [...products, newProduct];
+        writeProducts(productsToSave);
+        
+        res.redirect('/');
+}
 }
 module.exports = controller;
