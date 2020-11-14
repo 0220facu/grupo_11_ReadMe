@@ -112,17 +112,19 @@ flex-direction: column;}
       display: flex;
       justify-content: space-between;
     }
+    
     .boton3
     {border-radius: 3px;
     width: 16vw;
-    padding: 10px;
-    height: 29px;
+    padding: 0px;
+    height: 40px;
     border: 2px solid;
     color: black;
     background-color: #78B38A;
    font-size: 12px;
    text-decoration:none;
    margin-top: 1px;
+   text-align: center;
 }
     
     .miClase2{
@@ -223,6 +225,13 @@ flex-direction: column;}
    font-family: 'Mulish', sans-serif;
    font-weight: 600;
    text-align: center;
+}
+.destacadoindex{
+   font-family: 'Mulish', sans-serif;
+   font-weight: 600;
+   text-align: center;
+   margin-top: 20px;
+   margin-bottom: 20px;
 }
 
 .texto{
@@ -361,6 +370,8 @@ flex-direction: column;}
       margin-left:55px;
      margin-top: 0px;
      color: green;
+     margin-top: 20px;
+     margin-bottom: 20px;
      }
    .titulolibro{
       font-family: 'Mulish', sans-serif;
