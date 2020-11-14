@@ -1,71 +1,72 @@
 [
-{
-    "id" : "1" ,
-    "titulo": "Caperucita Roja",
-    "año de publicacion": "1990",
-    "editorial":  "Ledesma",
-    "idioma":  "Español",
-    "sinopsis": "Una niña vestida de rojo es interceptada por un lobo malvado camino a la casa de su abuela",
-    "escritor":  "Charles Perrault",
-    "categoria":  "Niños",
-    "paginas": "260",
-    "destacado" : "si",
-    "img": "caperucitaroja.jpg"
-
-},
-{
-    "id" : "2",
-    "titulo": "Master Cheff"      ,
-    "año de publicacion": "2020" ,
-    "editorial": "Planeta",
-    "idioma":  "Español",
-    "sinopsis": "Guias paso a paso para aprender a cocinar junto con uno de los Cheff mas reconocidos de la Argentina",
-    "escritor": "Ariel Rodriguez Palacios",
-    "categoria": "Cocina",
-    "paginas": "95",
-    "destacado" : "si",
-    "img": "cocina.jpg"
+ {
+  "id": 1,
+  "titulo": "Caperucita Roja",
+  "publicacion": "1990",
+  "editorial": "Ledesma",
+  "idioma": "Español",
+  "sinopsis": "Una niña vestida de rojo es interceptada por un lobo malvado camino a la casa de su abuela",
+  "escritor": "Charles Perrault",
+  "categoria": "Niños",
+  "paginas": "260",
+  "precio": 1000 ,
+  "destacado": "si",
+  "img": "caperucitaroja.jpg"
  },
-{
-    "id" : "3",
-    "titulo": "Astronomia para princiantes",
-    "año de publicacion": "2015",
-    "editorial": "Planeta",
-    "idioma": "Español",
-    "sinopsis": "El libro trata temas como la posibilidad de encontrar vida en otros planetas o el futuro del Sistema Solar. Y cuenta con un atractivo añadido: más de 250 espectaculares fotos en color." ,
-    "escritor": "Carl Sagan",
-    "categoria": "Ciencia",
-    "paginas": "360",
-    "destacado" : "no",
-    "img": "cuadernodeciencia.jpg"
-    },
-{
-    "id" : "4",
-    "titulo": "Html y Css",
-    "año de publicacion": "2009",
-    "editorial": "Digital House",
-    "idioma": "Español",
-    "sinopsis": "Desarrolla tus habilidades con el Front-End a traves de Html y Css! Con este libro aprenderas a diseñar las vistas de tus paginas web" ,
-    "escritor": "Matt Thomas",
-    "categoria": "Programacion",
-    "paginas": "89",
-    "destacado" : "no",
-    "img": "html.png"   
-},
-    {
-    "id" : "5",
-    "titulo": "Star Wars",
-    "año de publicacion": "1998",
-    "editorial": "Planeta Comic",
-    "idioma": "Ingles",
-    "sinopsis": "Tras escapar de la terrible Flota Imperial, un grupo de guerreros de la libertad, encabezados por Luke Skywalker, ha establecido una nueva base secreta en el remoto mundo helado de Hoth", 
-    "escritor": "George Lucas",
-    "categoria": "Ciencia Ficcion",
-    "paginas": "579",
-    "destacado" : "si",
-    "img": "starwars.jpg"
-    }
-
+ {
+  "id": 2,
+  "titulo": "Master Cheff",
+  "publicacion": "2020",
+  "editorial": "Planeta",
+  "idioma": "Español",
+  "sinopsis": "Guias paso a paso para aprender a cocinar junto con uno de los Cheff mas reconocidos de la Argentina",
+  "escritor": "Ariel Rodriguez Palacios",
+  "categoria": "Cocina",
+  "paginas": "95",
+  "precio": 5000 ,
+  "destacado": "si",
+  "img": "cocina.jpg"
+ },
+ {
+  "id": 3,
+  "titulo": "Astronomia para princiantes",
+  "publicacion": "2015",
+  "editorial": "Planeta",
+  "idioma": "Español",
+  "sinopsis": "El libro trata temas como la posibilidad de encontrar vida en otros planetas o el futuro del Sistema Solar. Y cuenta con un atractivo añadido: más de 250 espectaculares fotos en color.",
+  "escritor": "Carl Sagan",
+  "categoria": "Ciencia",
+  "paginas": "360",
+  "precio": 9500 ,
+  "destacado": "no",
+  "img": "cuadernodeciencia.jpg"
+ },
+ {
+  "id": 4,
+  "titulo": "Html y Css",
+  "publicacion": "2009",
+  "editorial": "Digital House",
+  "idioma": "Español",
+  "sinopsis": "Desarrolla tus habilidades con el Front-End a traves de Html y Css! Con este libro aprenderas a diseñar las vistas de tus paginas web",
+  "escritor": "Matt Thomas",
+  "categoria": "Programacion",
+  "paginas": "89",
+  "precio": 3500 ,
+  "destacado": "no",
+  "img": "html.png"
+ },
+ {
+  "id": 5,
+  "titulo": "Star Wars",
+  "publicacion": "1998",
+  "editorial": "Planeta Comic",
+  "idioma": "Ingles",
+  "sinopsis": "Tras escapar de la terrible Flota Imperial, un grupo de guerreros de la libertad, encabezados por Luke Skywalker, ha establecido una nueva base secreta en el remoto mundo helado de Hoth",
+  "escritor": "George Lucas",
+  "categoria": "Ciencia Ficcion",
+  "paginas": "579",
+  "precio": 7500 ,
+  "destacado": "si",
+  "img": "starwars.jpg"
+ }
 ]
-
- 

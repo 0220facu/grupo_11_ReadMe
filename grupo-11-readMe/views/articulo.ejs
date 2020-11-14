@@ -2,11 +2,15 @@
 <html lang="en">
     <%- include('partials/header') %>
     <main><div class="padrearticulo">
-        <article class="imgarticulo"><img src="/img/starwars.jpg" alt="star wars" class="total"></article>
+        <article class="imgarticulo"><img src="/images/<%=producto.img %>" alt="<%= producto.titulo%>" class="total"></article>
         <article class="descripcionarticulo">
-        <P class="titulolibro">Lorem ipsum dolor sit amet.</p>
-        <p class="precioarticulo">$10000</p> 
-        <p class="textoart">lorem quae accusamus, nemo sunt, provident amet et, corporis facilis vero doloremque quis doloribus non ea repudiandae laudantium? Adipisci libero neque, quos inventore esse temporibus, necessitatibus aperiam fugit cumque odit nostrum facilis accusantium. Enim sint ipsum magni repudiandae.</p>
+        <P class="titulolibro"><%=producto.titulo %></p>
+        <p class="precioarticulo">$<%= producto.precio %></p> 
+        <p class="textoart"><%= producto.sinopsis %> </p>
+        <form action="">
+            <label for="" class="destacado">Cantidad</label>
+            <input type="number" id="cantidad"class="cantidadlibros" value="1" name="cantidad">
+        </form>
        <button type="submit" class="boton">Comprar</button> </article>
     </div></main>
     <footer></footer>
