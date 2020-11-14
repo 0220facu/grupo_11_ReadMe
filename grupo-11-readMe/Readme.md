@@ -66,3 +66,14 @@ y lo referido a la web, creo que es un mundo por el que me queda mucho por conoc
 ir encontrando cosas nuevas constantemente. Espero, a través de este proyecto, afianzar nuevos conocimientos
 para luego poder aplicarlos en mi trabajo y futuros emprendimientos.
 
+Sprint 3
+
+Durante este Srpint tomamos las observaciones detalladas en las entregas anteriores, donde armamos mas 
+en detalle el siguiente procedimiento.
+Armamos reuniones diarias de seguimiento
+dividimos las tareas en tres partes iguales para cada uno de los integrantes
+nos centramos en las reuniones zoom, en verificar y revisar el funcionamiento de la parte a adjuntar al 
+trabajo.
+cada uno se encarg[o de verificar y armar en nuevas ramas cada parte del trabajo.
+se genero mayor actividad en el GITHUB
+Leimos el codigo de cada companiero para revisarlo y corregirlo si hacia falta.
