@@ -225,6 +225,7 @@ flex-direction: column;}
    font-family: 'Mulish', sans-serif;
    font-weight: 600;
    text-align: center;
+   flex-wrap: wrap;
 }
 .destacadoindex{
    font-family: 'Mulish', sans-serif;
