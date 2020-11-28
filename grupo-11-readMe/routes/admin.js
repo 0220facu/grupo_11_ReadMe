@@ -18,5 +18,6 @@ router.get('/',adminController.crear);
 router.get('/edit/:id',adminController.editar);
 router.post('/edit/:id',adminController.modificar);
 router.post('/crear',upload.any(), adminController.subir);
+router.delete('/delete/:id',adminController.eliminar);
 
 module.exports = router;

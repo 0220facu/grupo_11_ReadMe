@@ -64,6 +64,16 @@ modificar: (req, res) =>{
         writeProducts(productsToSave);
         
         res.redirect('/');
+},
+eliminar:(req,res) =>{
+    const id = req.params.id;
+    const products = getAllProducts();
+    const productoborrado = products.filter((product) => {
+        return product.id != id
+    })
+    console.log(productoborrado)
+        writeProducts(productoborrado);
+        res.redirect('/');
 }
 }
 module.exports = controller;
