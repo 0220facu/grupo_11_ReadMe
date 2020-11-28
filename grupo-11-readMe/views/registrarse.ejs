@@ -1,17 +1,17 @@
 <html lang="en">
     <%- include('partials/header') %>
      <main>
-        <form action="/" method="POST">
+        <form action="/users/register" method="POST" enctype="multipart/form-data">
         <div class="contenedorflex">
             
             <article>
                 <label class="destacadosincentrar" for="full-name">Nombre</label>
-                <input type="text" class="contenedordetexto" name="full-name" id="full-name" placeholder="Nombre y apellido">
+                <input type="text" class="contenedordetexto" name="full_name" id="full_name" placeholder="Nombre y apellido">
             </article>
             
             <article>
                 <label class="destacadosincentrar" for="birth-date">Fecha de nacimiento</label>
-                <input type="date" name="birth-date" class="contenedordetexto" id="birth-date">
+                <input type="date" name="birth_date" class="contenedordetexto" id="birth_date">
             </article>
             <article>
                 <label class="destacadosincentrar" for="adress"> dirección</label>
@@ -35,7 +35,7 @@
             </article>
             <article>
                 <label class="destacadosincentrar" for="password">Elegí tu contraseña</label>
-                <input type="password" name="password-1" class="contenedordetexto" id="password-1" placeholder="Elegí tu contraseña">
+                <input type="password" name="password_1" class="contenedordetexto" id="password_1" placeholder="Elegí tu contraseña">
             </article>
             <article>   <label class="destacadosincentrar" for="password-2">Confirma tu contraseña</label>
                 <input type="password" name="password-2" id="password-2" class="contenedordetexto" placeholder="Confirma tu contraseña">

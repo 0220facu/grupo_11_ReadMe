@@ -1,0 +1,21 @@
+[
+ {
+  "id": 1
+ },
+ {
+  "id": 3,
+  "nombre": "pepe raul",
+  "nacimiento": "2002-10-01",
+  "direccion": "calle falsa 123",
+  "email": "peperaul123@email.com",
+  "username": "pepe uzumaki",
+  "contraseña": "holabuendiaa",
+  "intereses": [
+   null,
+   "cocina",
+   "Ciencia",
+   null,
+   ""
+  ]
+ }
+]

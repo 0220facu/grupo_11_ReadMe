@@ -22,7 +22,7 @@ const controller = {
         res.render('admin',{ products : products,})
     },
         subir: (req,res, next) =>{
-            
+           console.log( req.body.genero)
       const newProduct ={
         id: generateNewId(),
         titulo: req.body.titulo,
