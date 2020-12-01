@@ -13,7 +13,7 @@
   </div>
 </div>
 <h2 class="destacado">estas editando el libro: <%=product.titulo%></h2>
-<form action="/admin/edit/<%=product.id%>" method="POST">   
+<form action="/admin/edit/<%=product.id%>?_method=PUT" method="POST">   
 <section class="contenedorflex">  
 <article>
     <label class="destacadosincentrar" for="titulo">Título del libro:</label>
