@@ -57,16 +57,17 @@
  },
  {
   "id": 5,
-  "titulo": "Star Wars",
+  "titulo": "Star Wars.",
   "publicacion": "1998",
   "editorial": "Planeta Comic",
   "idioma": "Ingles",
-  "sinopsis": "Tras escapar de la terrible Flota Imperial, un grupo de guerreros de la libertad, encabezados por Luke Skywalker, ha establecido una nueva base secreta en el remoto mundo helado de Hoth",
+  "sinopsis": "Tras escapar de la terrible Flota Imperial, un grupo de guerreros de la libertad, encabezados por Luke Skywalker, ha establecido una nueva base secreta en el remoto mundo helado de Hoth ",
   "escritor": "George Lucas",
-  "categoria": "Ciencia Ficcion",
+  "categoria": "Ciencia ficción",
   "paginas": "579",
-  "precio": 7500,
+  "precio": "10000",
   "destacado": "si",
-  "img": "starwars.jpg"
+  "img": "starwars.jpg",
+  "publicación": "1998"
  }
 ]
