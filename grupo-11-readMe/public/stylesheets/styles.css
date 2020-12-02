@@ -240,7 +240,13 @@ flex-direction: column;}
    font-weight: 200;
    text-align: center;
 }
-
+.centrar{
+   width: 100vw;
+   display: flex;
+   align-items: center;
+  justify-content: center;
+  
+}
 
 .destacadoSinCentrar{
    font-family: 'Mulish', sans-serif;
@@ -429,6 +435,16 @@ flex-direction: column;}
   background-color: #78B38A;
   text-decoration:none;
   margin-left: 0px;
+}
+  .boton4
+  {border-radius: 3px;
+  width: 13vw;
+  padding: 10px;
+  border: 2px solid;
+  color: black;
+  background-color: rgb(202, 95, 95);
+  text-decoration:none;
+  margin-top: 10px;
 }
   
   .miClase2{

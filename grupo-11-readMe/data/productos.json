@@ -57,29 +57,17 @@
  },
  {
   "id": 5,
-  "titulo": "Star Wars",
+  "titulo": "Star Wars.",
   "publicacion": "1998",
   "editorial": "Planeta Comic",
   "idioma": "Ingles",
-  "sinopsis": "Tras escapar de la terrible Flota Imperial, un grupo de guerreros de la libertad, encabezados por Luke Skywalker, ha establecido una nueva base secreta en el remoto mundo helado de Hoth",
+  "sinopsis": "Tras escapar de la terrible Flota Imperial, un grupo de guerreros de la libertad, encabezados por Luke Skywalker, ha establecido una nueva base secreta en el remoto mundo helado de Hoth ",
   "escritor": "George Lucas",
-  "categoria": "Ciencia Ficcion",
+  "categoria": "Ciencia ficción",
   "paginas": "579",
-  "precio": 7500,
+  "precio": "10000",
   "destacado": "si",
-  "img": "starwars.jpg"
- },
- {
-  "id": 6,
-  "titulo": "The Outsider",
-  "publicación": "2018",
-  "editorial": "Charles Scribner's Sons",
-  "idioma": "ingles ",
-  "sinopsis": " En la ciudad ficticia de Flint City, Oklahoma, el detective de la policía Ralph Anderson arresta al entrenador de béisbol y profesor Terry Maitland frente a una multitud de espectadores, acusándolo de violar, matar y mutilar a un niño de 11 años." ,
-  "escritor": "Stephen King",
-  "paginas": "586",
-  "precio": "5000",
-  "destacado": "No",
-  "img": "1605320782402-descarga (5).jpg"
+  "img": "starwars.jpg",
+  "publicación": "1998"
  }
 ]

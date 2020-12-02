@@ -6,7 +6,7 @@
     <p >seleccione libro para editar</p>    
         <section class="destacadoflex" > 
                 <% for ( product of products) { %> 
-            <a href="/admin/edit/<%=product.id%>"><article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.categoria %> </article> <% } %></a> 
+            <a href="/admin/edit/<%=product.id%>" class="sinDecoracion"><article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.categoria %> </article> <% } %></a> 
             </section>
         </div>
   </div>

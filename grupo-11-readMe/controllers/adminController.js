@@ -22,7 +22,7 @@ const controller = {
         res.render('admin',{ products : products,})
     },
         subir: (req,res, next) =>{
-            
+           console.log( req.body.genero)
       const newProduct ={
         id: generateNewId(),
         titulo: req.body.titulo,
@@ -36,7 +36,6 @@ const controller = {
         precio: req.body.precio, 
         destacado: req.body.destacado == undefined ? "No" : req.body.destacado ,
         img: req.files[0].filename}
-          
           const products = getAllProducts();
 		const productsToSave = [...products, newProduct];
         writeProducts(productsToSave);
@@ -56,13 +55,32 @@ modificar: (req, res) =>{
     const products = getAllProducts();
     let productoEditado = products.map(product => {
             if(product.id == id){
-                return reloj = req.body
+        product.id= product.id,
+        product.titulo= req.body.titulo,
+        product.publicación = req.body.publicacion,
+        product.editorial=req.body.editorial,
+        product.idioma= req.body.idioma,
+        product.sinopsis=  req.body.sinopsis,
+        product.escritor= req.body.escritor,
+        product.categoria= req.body.categoria,
+        product.paginas= req.body.paginas, 
+        product.precio= req.body.precio, 
+        product.img= product.img
             }
-            return reloj
+            return product
     })
-    const productsToSave = [...products, newProduct];
-        writeProducts(productsToSave);
+        writeProducts(productoEditado);
         
+        res.redirect('/');
+},
+eliminar:(req,res) =>{
+    const id = req.params.id;
+    const products = getAllProducts();
+    const productoborrado = products.filter((product) => {
+        return product.id != id
+    })
+    console.log(productoborrado)
+        writeProducts(productoborrado);
         res.redirect('/');
 }
 }

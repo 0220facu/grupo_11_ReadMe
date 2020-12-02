@@ -13,7 +13,7 @@
   </div>
 </div>
 <h2 class="destacado">estas editando el libro: <%=product.titulo%></h2>
-<form action="/admin/edit/<%=product.id%>" method="POST">   
+<form action="/admin/edit/<%=product.id%>?_method=PUT" method="POST">   
 <section class="contenedorflex">  
 <article>
     <label class="destacadosincentrar" for="titulo">Título del libro:</label>
@@ -27,6 +27,10 @@
   <label class="destacadosincentrar" for="editorial">Editorial:</label>
   <input type="text" name="editorial" class="contenedordetexto" id="editorial"value="<%= productoParaEditar.editorial %>" required>
 </article>
+<article>
+  <label for="img" class="destacadosincentrar">Imagen:</label>
+  <input type="file"class="contenedordetexto"value="<%= productoParaEditar.img %>" name="img" id=img>
+</article>
 <article> 
   <label class="destacadosincentrar" for="año">Año de publicación:</label>
   <input type="text" name="publicacion"class="contenedordetexto" id="publicacion"value="<%= productoParaEditar.publicacion %>" required>
@@ -35,6 +39,11 @@
   <label class="destacadosincentrar" for="paginas">Cantidad de páginas:</label>
   <input type="text" name="paginas"class="contenedordetexto" id="paginas"value="<%= productoParaEditar.paginas %>" required>
 </article>
+<article>
+  <label class="destacadosincentrar" for="precio">precio:</label>
+  <input type="number" name="precio"class="contenedordetexto" id="precio" required>
+</article>
+
 <article>
   <label class="destacadosincentrar" for="idioma">Idioma:</label>
   <input type="text" name="idioma"class="contenedordetexto" id="idioma"value="<%= productoParaEditar.idioma %>"required>
@@ -60,6 +69,12 @@
   <button type="submit" class="boton3" >Enviar </button>
 </article>
 </form>
+<article class="centrar">
+<form method="POST" action="/admin/delete/<%= product.id %>?_method=DELETE" >
+  <button type="submit"  class="boton4">ELIMINAR</button>
+</form>
+</article>
+
 </main>
 <footer></footer>
 </body>
