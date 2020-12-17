@@ -6,7 +6,7 @@
     <p >seleccione libro para editar</p>    
         <section class="destacadoflex" > 
                 <% for ( product of products) { %> 
-            <a class="sinDecoracion" href="/admin/edit/<%=product.id%>"><article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.titulo %> </article> <% } %></a> 
+            <a class="sinDecoracion" href="/articulo/edit/<%=product.id%>"><article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.titulo %> </article> <% } %></a> 
             </section>
         </div>
 
@@ -17,7 +17,7 @@
 <section class="contenedorflex">  
 <article>
     <label class="destacadosincentrar" for="titulo">Título del libro:</label>
-      <input type="text" class="contenedordetexto" name="titulo" id="titulo"value<%= productoParaEditar.titulo %> required>
+      <input type="text" class="contenedordetexto" name="titulo" id="titulo"value="<%= productoParaEditar.titulo %>" required>
   </article>
 <article> 
     <label class="destacadosincentrar" for="nombre"> Escritor:</label>
@@ -41,7 +41,7 @@
 </article>
 <article>
   <label class="destacadosincentrar" for="precio">precio:</label>
-  <input type="number" name="precio"class="contenedordetexto" id="precio" required>
+  <input type="number" name="precio"class="contenedordetexto" id="precio" value="<%= productoParaEditar.precio   %>"required>
 </article>
 
 <article>
@@ -70,7 +70,7 @@
 </article>
 </form>
 <article class="centrar">
-<form method="POST" action="/admin/delete/<%= product.id %>?_method=DELETE" >
+<form method="POST" action="/articulo/delete/<%= product.id %>?_method=DELETE" >
   <button type="submit"  class="boton4">ELIMINAR</button>
 </form>
 </article>
