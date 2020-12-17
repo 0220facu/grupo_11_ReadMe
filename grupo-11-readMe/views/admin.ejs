@@ -6,13 +6,13 @@
     <p >seleccione libro para editar</p>    
         <section class="destacadoflex" > 
                 <% for ( product of products) { %> 
-            <a href="/admin/edit/<%=product.id%>" class="sinDecoracion"><article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.categoria %> </article> <% } %></a> 
+            <a href="/articulo/edit/<%=product.id%>" class="sinDecoracion"><article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.categoria %> </article> <% } %></a> 
             </section>
         </div>
   </div>
 </div>
 <h2 class="destacado">Agregar nuevo libro</h2>
-<form action="/admin/crear" method="POST" enctype="multipart/form-data">   
+<form action="/articulo/crear" method="POST" enctype="multipart/form-data">   
 <section class="contenedorflex">  
 <article>
     <label class="destacadosincentrar" for="titulo">Título del libro:</label>
@@ -24,7 +24,7 @@
   </article>
 <article> 
     <label class="destacadosincentrar" for="nombre"> Escritor:</label>
-    <input type="text" name="escritor" class="contenedordetexto" id="escritor" required >
+    <input type="text" name="escritor" class="contenedordetexto" id="es critor" required >
 </article>
 <article>
   <label class="destacadosincentrar" for="editorial">Editorial:</label>
