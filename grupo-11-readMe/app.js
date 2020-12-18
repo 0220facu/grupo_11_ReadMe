@@ -4,7 +4,9 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan'); 
 const methodOverride = require('method-override'); 
-
+const session = require('express-session')
+const cookieCheck =require('./middlewares/cookieCheck')
+const generateSession =require('./middelwares/generateSession')
 var app = express();
 
 // view engine setup
@@ -16,7 +18,14 @@ app.use(methodOverride('_method'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({
+  secret: 'textoSuperSecreto',
+  resave: true,
+  saveUninitialized: true
+}))
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cookieCheck)
+app.use(generateSession)
 
 var usersRouter = require('./routes/users');
 var mainRouter = require('./routes/main');

@@ -1,9 +1,6 @@
 [
  {
-  "id": 1
- },
- {
-  "id": 3,
+  "id": 1,
   "nombre": "pepe raul",
   "nacimiento": "2002-10-01",
   "direccion": "calle falsa 123",

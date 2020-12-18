@@ -1,5 +1,7 @@
 const fs = require( "fs") ;
 const path = require( "path") ;
+
+
 function getAllusers(){
 	const usersFilePath = path.join(__dirname, '../data/usuarios.json');
     return JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -42,5 +44,18 @@ const usersToSave = [...users, newUser];
 writeusers(usersToSave);
 
 res.redirect('/');
-}}
+},
+ingresar:(req,res)=>{
+    const users = getAllusers();
+    const usuarioLogeado  = users.find((usuario)=> {
+        return usuario.email == req.body.email 
+     })
+     req.session.user = usuarioLogeado;
+     if(req.body.remember){
+        res.cookie('user', usuarioLogeado.id, {maxAge: 900000})
+    res.redirect('/')
+}
+res.redirect('/users/login')
+}
+}
 module.exports = controller;

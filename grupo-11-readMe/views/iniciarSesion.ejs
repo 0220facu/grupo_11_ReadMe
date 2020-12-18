@@ -2,25 +2,30 @@
 <html lang="en">
     <%- include('partials/header') %>
     <main>
-        <div class=""><form action="index.html" method="POST">
+        <div class=""><form action="/users/login" method="POST">
             <div class="contenedorflex">
              <article class="">
-                <label for="username" class="destacadosincentrar">nombre</label>
+                <label for="username" class="destacadosincentrar">Nombre</label>
                 <input type="text" class="contenedordetexto" name="username" id="username" placeholder="Nombre de usuario">
             </article>
             <article class="">
-                <label for="password" class="destacadosincentrar">contraseña</label>
+                <label for="password" class="destacadosincentrar">Contraseña</label>
             <input type="password" class="contenedordetexto" name="password" id="password-1" placeholder="Ingresa tu clave">
             </article>
+            <article class="contenedorderemember" ><label class="destacadosincentrar" for="remember" > Recordar contraseña</label>
+                <input type="checkbox" id="remember" name="remember"></article>
+              <article>
         </div>
+
                 <div class="contenedorbotones">
             <article>
                 <button  class="boton2" type="submit">Confirmar</button>
             </article>
-            <article>
+          <!--  <article>
                 <button class="boton2" type="submit">Olvide mi clave</button>
             </article>
-                </div></form>
+                </div>-->
+            </form>
     </div>
     </main>
     <footer></footer>
