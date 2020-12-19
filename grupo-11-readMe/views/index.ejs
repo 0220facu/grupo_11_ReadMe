@@ -15,16 +15,20 @@
             
         <div class="destacado">
             <p >Destacados</p>    
-                <section class="destacadoflex" >
-                <article class="libro" ><img class="total" src="img/html.png" alt="introducción a html"></article>
-                <article class="libro" ><img class="total" src="img/cocina.jpg" alt="bienvenidos a la cocina">Cocina</article>
-                <article class="libro" ><img class="total" src="img/cuadernodeciencia.jpg" alt="Cuaderno de ciencia">ciencia</article>
-                <article class="libro" ><img class="total" src="img/starwars.jpg" alt="star wars">Ciencia Ficción</article>
-                <article class="libro" ><img class="total" src="img/caperucitaroja.jpg" alt="Caperucita roja">Niños</article>
+                <section class="destacadoflex" > 
+                    <% for ( product of destacados) { %> 
+               <a href="/articulo/<%= product.id %> " class="sinDecoracion"> <article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.categoria %> </article></a> <% } %> 
                 </section>
             </div>
+        <div class="destacado">
+            <p class="destacadoindex">Todos los Libros</p>    
+                <section class="destacadoflex" > 
+                        <% for ( product of products) { %> 
+                            <a href="/articulo/<%= product.id %> " class="sinDecoracion"><article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.categoria %> </article></a> <% } %> 
+                    </section>
+                </div>
         </div>
     </main>
-    <footer></footer>
+    <footer><%- include('partials/footer') %></footer>
 </body>
 </html>

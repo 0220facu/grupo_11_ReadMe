@@ -2,63 +2,70 @@
   <%- include('partials/header') %>
 <main>
 <div>
-<h2>Libros disponibles</h2>    
-  <section class="destacadoflex" >
-  <article class="libro" ><img class="total" src="img/html.png" alt="introducción a html">Introducción a Html</Html></article>
-  <article class="libro" ><img class="total" src="img/cocina.jpg" alt="bienvenidos a la cocina">Bienvenidos a la Cocina</article>
-  <article class="libro" ><img class="total" src="img/cuadernodeciencia.jpg" alt="Cuaderno de ciencia">"Cuaderno de ciencia"</article>
-  <article class="libro" ><img class="total" src="img/starwars.jpg" alt="star wars">"star wars"</article>
-  <article class="libro" ><img class="total" src="img/caperucitaroja.jpg" alt="Caperucita roja">"Caperucita roja"</article>
-  </section>
+  <div class="destacado">
+    <p >seleccione libro para editar</p>    
+        <section class="destacadoflex" > 
+                <% for ( product of products) { %> 
+            <a href="/articulo/edit/<%=product.id%>" class="sinDecoracion"><article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.categoria %> </article> <% } %></a> 
+            </section>
+        </div>
+  </div>
 </div>
 <h2 class="destacado">Agregar nuevo libro</h2>
-<form action="resultado.html" method="POST"></form>    
+<form action="/articulo/crear" method="POST" enctype="multipart/form-data">   
 <section class="contenedorflex">  
 <article>
     <label class="destacadosincentrar" for="titulo">Título del libro:</label>
       <input type="text" class="contenedordetexto" name="titulo" id="titulo" required>
   </article>
+  <article>
+    <label for="img" class="destacadosincentrar">Imagen:</label>
+    <input type="file"class="contenedordetexto" name="img" id=img>
+  </article>
 <article> 
     <label class="destacadosincentrar" for="nombre"> Escritor:</label>
-    <input type="text" name="nombre" class="contenedordetexto" id="nombre" required >
+    <input type="text" name="escritor" class="contenedordetexto" id="es critor" required >
 </article>
 <article>
   <label class="destacadosincentrar" for="editorial">Editorial:</label>
   <input type="text" name="editorial" class="contenedordetexto" id="editorial" required>
 </article>
 <article> 
-  <label class="destacadosincentrar" for="categoria">Categoría</label>
-  <input type="text" name="nombre"class="contenedordetexto" id="Categoría"required>
-</article>
-<article> 
   <label class="destacadosincentrar" for="año">Año de publicación:</label>
-  <input type="text" name="año"class="contenedordetexto" id="año" required>
+  <input type="text" name="publicacion"class="contenedordetexto" id="publicacion" required>
 </article>
 <article>
   <label class="destacadosincentrar" for="paginas">Cantidad de páginas:</label>
   <input type="text" name="paginas"class="contenedordetexto" id="paginas" required>
 </article>
 <article>
+  <label class="destacadosincentrar" for="precio">precio:</label>
+  <input type="number" name="precio"class="contenedordetexto" id="precio" required>
+</article>
+
+<article>
   <label class="destacadosincentrar" for="idioma">Idioma:</label>
   <input type="text" name="idioma"class="contenedordetexto" id="idioma"required>
 </article>
+<article class="contenedordetexto" ><label class="destacadosincentrar" for="destacado" > Destacar producto</label>
+  <input type="checkbox" id="destacado" name="destacado" value="SI"></article>
 <article>
-  <label class="destacadosincentrar" for="genero">Género : </label>
-  <select name="genero"class="contenedordetexto" id="genero">
-    <option value="1">Programación</option>
-    <option value="2">Cocina</option>
-    <option value="3">Ciencia</option>
-    <option value="4">Drama</option>
-    <option value="5">Ciencia ficción</option>
-    <option value="6">Arte</option>
+  <label class="destacadosincentrar" for="categoria">Género : </label>
+  <select name="categoria"class="contenedordetexto" id="categoria">
+    <option value="Programación">Programación</option>
+    <option value="Cocina">Cocina</option>
+    <option value="Ciencia">Ciencia</option>
+    <option value="Drama">Drama</option>
+    <option value="Ciencia ficción">Ciencia ficción</option>
+    <option value="Arte">Arte</option>
     </select>
   </article>    
 <article>
   <label class="destacadosincentrar" for="sinopsis">Sinopsis</label> <br>
-  <textarea name="sinopsis" id="sinopsois" cols="60" rows="7" > </textarea>
+  <textarea name="sinopsis" id="sinopsis" cols="60" rows="7" > </textarea>
   </section>
 <article class="contenedorbotones">
-  <input type="submit" class="boton3" value="Enviar">
+  <button type="submit" class="boton3" >Enviar </button>
 </article>
 </form>
 </main>
