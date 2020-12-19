@@ -16,8 +16,11 @@ const storage = multer.diskStorage({
 
 
 router.get('/login',usersController.login );
-/*router.post'/login',usersController.entrar );*/
+
+router.post('/login',usersController.ingresar );
+
 router.get('/register',usersController.register );
+
 router.post('/register',upload.any(),usersController.crear );
 
 module.exports = router;
