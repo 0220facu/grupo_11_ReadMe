@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const usersController = require('../controllers/usersController');
 const multer  = require('multer');
+const guest = require('../middelwares/guest') ;
 const validator = require('../middelwares/validator')
 
 const storage = multer.diskStorage({
@@ -16,11 +17,11 @@ const storage = multer.diskStorage({
   const upload = multer({ storage: storage })
 
 
-router.get('/login',usersController.login );
+router.get('/login', guest ,usersController.login );
 
 router.post('/login', validator.login, usersController.ingresar );
 
-router.get('/register',usersController.register );
+router.get('/register', guest, usersController.register );
 
 router.post('/register',upload.any(), validator.register, usersController.crear );
 
