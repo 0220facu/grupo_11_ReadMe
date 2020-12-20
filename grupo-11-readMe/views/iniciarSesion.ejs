@@ -2,6 +2,11 @@
 <html lang="en">
     <%- include('partials/header') %>
     <main>
+        <% if(typeof errors !='undefined') { %>
+            <% for (error of errors) { %>
+                <p><%= error.msg %> </p>
+            <% } %>
+            <% } %>
         <div class=""><form action="/users/login" method="POST">
             <div class="contenedorflex">
              <article class="">

@@ -1,6 +1,11 @@
 <html lang="en">
     <%- include('partials/header') %>
      <main>
+        <% if(typeof errors !='undefined') { %>
+            <% for (error of errors) { %>
+                <p><%= error.msg %> </p>
+            <% } %>
+            <% } %>
         <form action="/users/register" method="POST" enctype="multipart/form-data">
         <div class="contenedorflex">
             
