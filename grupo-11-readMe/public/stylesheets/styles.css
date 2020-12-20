@@ -5,6 +5,10 @@
    flex-grow: 1;
 
 }
+.error{
+   color:red
+   justify-content= center
+}
 .login{
    border-radius: 3px;
    border: 0px;

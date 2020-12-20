@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan'); 
 const methodOverride = require('method-override'); 
 const session = require('express-session')
-const cookieCheck =require('./middlewares/cookieCheck')
+const cookieCheck =require('./middelwares/cookieCheck')
 const generateSession =require('./middelwares/generateSession')
 var app = express();
 
