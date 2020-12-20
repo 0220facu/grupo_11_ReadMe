@@ -1,5 +1,6 @@
-const fs = require( "fs") ;
-const path = require( "path") ;
+const fs = require( "fs");
+const path = require( "path");
+const {validationResult} = require('express-validator')
 
 
 function getAllusers(){
@@ -28,15 +29,19 @@ register: (req, res) => {
   crear: (req,res)=>{
     const users = getAllusers()
     const intereses=[req.body.proramacion, req.body.cocina, req.body.ciencia, req.body.kids,req.body.otros]  
-    
+    const errors = validationResult(req)
+     if (!errors.isEmpty()){
+         res.render('registrarse', {errors: errors.errors})
+         return
+     }
     const newUser ={
     id: generateNewId(),
     nombre: req.body.full_name,
     nacimiento: req.body.birth_date,
     direccion : req.body.adress,
+    foto_de_perfil: req.files[0].filename,
     email: req.body.email,
     username: req.body.username,
-    foto_de_perfil:req.files[0].filename ,
     contraseña: req.body.password_1,
     intereses: intereses
 } 
@@ -50,6 +55,11 @@ ingresar:(req,res)=>{
     const usuarioLogeado  = users.find((usuario)=> {
         return usuario.email == req.body.email 
      })
+     const errors = validationResult(req)
+     if (!errors.isEmpty()){
+         res.render('iniciarSesion', {errors: errors.errors})
+         return
+     }
      req.session.user = usuarioLogeado;
      if(req.body.remember){
         res.cookie('user', usuarioLogeado.id, {maxAge: 900000})
