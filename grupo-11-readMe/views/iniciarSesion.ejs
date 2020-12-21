@@ -4,7 +4,7 @@
     <main>
         <% if(typeof errors !='undefined') { %>
             <% for (error of errors) { %>
-                <p><%= error.msg %> </p>
+                <p class="error"><%= error.msg %> </p>
             <% } %>
             <% } %>
         <div class=""><form action="/users/login" method="POST">

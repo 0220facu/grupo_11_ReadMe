@@ -72,7 +72,7 @@ module.exports={
         .custom((value, { req }) => {
         const users = readJSON()
         const userFound = users.find(user => user.email == value)
-        return (req.body.password == userFound.contraseña)}
+        return bcryptjs.compareSync(req.body.password, userFound.contraseña)}
         )
         .withMessage('usuario o contraseña incorrectos')
        
