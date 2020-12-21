@@ -53,9 +53,10 @@ res.redirect('/');
 ingresar:(req,res)=>{
     const users = getAllusers();
     const usuarioLogeado  = users.find((usuario)=> {
-        return usuario.email == req.body.email 
+        return usuario.email == req.body.username
      })
      const errors = validationResult(req)
+    
      if (!errors.isEmpty()){
          res.render('iniciarSesion', {errors: errors.errors})
          return
@@ -63,9 +64,16 @@ ingresar:(req,res)=>{
      req.session.user = usuarioLogeado;
      if(req.body.remember){
         res.cookie('user', usuarioLogeado.id, {maxAge: 900000})
-    res.redirect('/')
+        
+    
 }
-res.redirect('/users/login')
+console.log(req.session.user)
+res.redirect('/')
+},
+logout:(req,res)=>{
+    req.session.destroy()
+    res.cookie('user', null, {maxAge: -1})
+    return res.redirect('/');
 }
 }
 module.exports = controller;

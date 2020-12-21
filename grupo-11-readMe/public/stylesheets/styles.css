@@ -1,3 +1,27 @@
+.logoutContainer{
+   margin-top: auto;
+   margin-bottom: auto;
+  margin-right: 15px;
+}
+.logout{
+   text-align: center;
+   padding: 25px;
+   background-color: white;
+   border-radius: 40px;
+   color:red;
+   text-decoration: none;
+}
+.usuario{
+   margin-top: auto;
+   margin-bottom: auto;
+   width: 70%;
+   height: 100%;
+}
+.fotodeperfil{ 
+   height: 80%;
+ width: 30%;
+ border-radius: 100px;
+}
 .titulo{
   
    font-family: 'Lato', sans-serif;
@@ -6,8 +30,15 @@
 
 }
 .error{
-   color:red
-   justify-content= center
+   text-align: center;
+   width: 30%;
+   background-color: rgb(223, 94, 94);
+   padding: 10px;
+   color:white;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 5px;
+   border-radius: 30px;
 }
 .login{
    border-radius: 3px;

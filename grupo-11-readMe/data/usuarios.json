@@ -16,13 +16,14 @@
   ]
  },
  {
-  "id": 2,
-  "nombre": "",
+  "id": 9,
+  "nombre": "hola",
   "nacimiento": "",
   "direccion": "",
-  "email": "",
-  "username": "",
-  "contraseña": "",
+  "foto_de_perfil": "1608496613790-Sasuke_Uchiha_1_HD.png",
+  "email": "hola@email.com",
+  "username": "sasuke",
+  "contraseña": "12345678",
   "intereses": [
    null,
    null,
@@ -32,93 +33,14 @@
   ]
  },
  {
-  "id": 3,
-  "nombre": "",
-  "nacimiento": "",
-  "direccion": "",
-  "email": "",
-  "username": "",
-  "contraseña": "",
-  "intereses": [
-   null,
-   null,
-   null,
-   null,
-   ""
-  ]
- },
- {
-  "id": 4,
-  "nombre": "",
-  "nacimiento": "",
-  "direccion": "",
-  "email": "",
-  "username": "",
-  "contraseña": "",
-  "intereses": [
-   null,
-   null,
-   null,
-   null,
-   ""
-  ]
- },
- {
-  "id": 5,
-  "nombre": "",
-  "nacimiento": "",
-  "direccion": "",
-  "email": "",
-  "username": "",
-  "contraseña": "",
-  "intereses": [
-   null,
-   null,
-   null,
-   null,
-   ""
-  ]
- },
- {
-  "id": 6,
-  "nombre": "",
-  "nacimiento": "",
-  "direccion": "",
-  "email": "",
-  "username": "",
-  "contraseña": "",
-  "intereses": [
-   null,
-   null,
-   null,
-   null,
-   ""
-  ]
- },
- {
-  "id": 7,
-  "nombre": "",
-  "nacimiento": "",
-  "direccion": "",
-  "email": "",
-  "username": "",
-  "contraseña": "",
-  "intereses": [
-   null,
-   null,
-   null,
-   null,
-   ""
-  ]
- },
- {
-  "id": 8,
-  "nombre": "",
-  "nacimiento": "",
-  "direccion": "",
-  "email": "",
-  "username": "",
-  "contraseña": "",
+  "id": 10,
+  "nombre": "naruto uzumaki",
+  "nacimiento": "2020-12-01",
+  "direccion": "konoha 123",
+  "foto_de_perfil": "1608524894440-naruto.jpg",
+  "email": "Naruto.Uzumaki@email.com",
+  "username": "naruto",
+  "contraseña": "12345678",
   "intereses": [
    null,
    null,

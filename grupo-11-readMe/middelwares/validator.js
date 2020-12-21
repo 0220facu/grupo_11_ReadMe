@@ -5,6 +5,21 @@ const bcryptjs =require('bcryptjs')
 
 module.exports={
     register:[
+        body('username')
+        .isLength({ min: 4 })
+        .withMessage('su nombre de usuario debe tener minimo 4 caracteres')
+        .bail()
+        .notEmpty()
+        .withMessage('Debe ingresar un nombre de usuario')
+        .bail(),
+        body('birth_date')
+        .notEmpty()
+        .withMessage('Debe ingresar una fecha de nacimiento')
+        .bail(),
+        body('full_name')
+        .notEmpty()
+        .withMessage('Debe ingresar un nombre')
+        .bail(),
         body('email')
         .notEmpty()
         .withMessage('el campo email no puede quedar vacío')
@@ -18,19 +33,23 @@ module.exports={
             return !userFound
         })     
         .withMessage('este email ya se encuentra registrado'),
-            body('password')
+        body('email2')
+        .custom((value,{ req })=> {return value ==req.body.email})
+        .notEmpty()
+        .withMessage('Debe ingresar una fecha de nacimiento'),  
+        body('password_1')
             .notEmpty()
             .withMessage('el campo password no puede quedar vacío')
             .bail()
             .isLength({ min: 8 })
             .withMessage('la contraseña debe tener al menos 8 caracteres')
             .bail()
-            .custom((value,{ req })=> value == req.body.retype)
+            .custom((value,{ req })=> value == req.body.password_2)
             .withMessage('las contraseñas no coinciden'),
-        body('retype')
+        body('password_2')
         .notEmpty()
             .withMessage('debes repetir la contraseña'),
-        body('avatar')
+        body('picture')
         .custom((valueImg, { req }) => req.files[0])
         .withMessage('debes ingresar una imagen de perfil')
         .bail()
@@ -40,22 +59,20 @@ module.exports={
             return extencionesAceptadas.includes(extencion)
         
           })
-          .withMessage('extención no valida'),
-
-        ],
+          .withMessage('extención no valida')],
     login:[
         body('password')
         .notEmpty()
         .withMessage('el campo password no puede quedar vacio')
         .bail(),
-        body('email')
+        body('username')
         .notEmpty()
         .withMessage('el campo email no puede quedar vacio')
         .bail()
         .custom((value, { req }) => {
         const users = readJSON()
         const userFound = users.find(user => user.email == value)
-        return  bcryptjs.compareSync(req.body.password, userFound.password)}
+        return (req.body.password == userFound.contraseña)}
         )
         .withMessage('usuario o contraseña incorrectos')
        

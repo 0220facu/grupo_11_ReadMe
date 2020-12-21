@@ -3,7 +3,8 @@ const router = express.Router();
 const usersController = require('../controllers/usersController');
 const multer  = require('multer');
 const guest = require('../middelwares/guest') ;
-const validator = require('../middelwares/validator')
+const validator = require('../middelwares/validator');
+const auth = require('../middelwares/auth');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -18,6 +19,8 @@ const storage = multer.diskStorage({
 
 
 router.get('/login', guest ,usersController.login );
+
+router.get('/logout', auth ,usersController.logout );
 
 router.post('/login', validator.login, usersController.ingresar );
 

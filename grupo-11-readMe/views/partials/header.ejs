@@ -26,14 +26,24 @@
             <input type="text" class="busqueda" id="busqueda" name="busqueda" placeholder="buscar" height="15px"></article></section>
             <article class="titulo"> 
                 <a class="nada" href="/">
-                    <h1 >README</h1>
+                    <h1 style="margin-left: 0%;">README</h1>
                 </a>
             </article>
-                <% if ( !userLog) { %> 
+                <% if (!userLog) { %> 
             <section class="ingresar">
             <article class="login"><a class="sinDecoracion" href="/users/login" ><button class="boton3">iniciar sesion</button></a></article>
             <article > <a  href="/users/Register" class="sinDecoracion" ><button class="boton3">registrarse</button></a></article>
         </section>
-                <% }  %>
+                <% }if (userLog) { %>
+                    <section class="ingresar">
+                        <article>
+                    <img  class="fotodeperfil" src="/images/fotos_de_perfil/<%= userLog.foto_de_perfil %>"> 
+                    <p class="nombreDeUsuario"><%= userLog.username %> </p>
+                </article>
+                <article class="logoutContainer">
+                    <a class="logout" href="/users/logout">logout</a>
+                </article>
+                    </section>
+                    <%}  %> 
     </div>
     </header>

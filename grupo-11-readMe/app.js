@@ -24,8 +24,9 @@ app.use(session({
   saveUninitialized: true
 }))
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cookieCheck)
 app.use(generateSession)
+
+app.use(cookieCheck)
 
 var usersRouter = require('./routes/users');
 var mainRouter = require('./routes/main');

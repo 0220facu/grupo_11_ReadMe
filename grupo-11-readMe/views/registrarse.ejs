@@ -3,7 +3,7 @@
      <main>
         <% if(typeof errors !='undefined') { %>
             <% for (error of errors) { %>
-                <p><%= error.msg %> </p>
+                <p class="error"><%= error.msg %> </p>
             <% } %>
             <% } %>
         <form action="/users/register" method="POST" enctype="multipart/form-data">
@@ -43,7 +43,7 @@
                 <input type="password" name="password_1" class="contenedordetexto" id="password_1" placeholder="Elegí tu contraseña">
             </article>
             <article>   <label class="destacadosincentrar" for="password-2">Confirma tu contraseña</label>
-                <input type="password" name="password-2" id="password-2" class="contenedordetexto" placeholder="Confirma tu contraseña">
+                <input type="password" name="password_2" id="password_2" class="contenedordetexto" placeholder="Confirma tu contraseña">
             </article>
             <section>
                 <h2 class="destacadosincentrar">Intereses</h2>
