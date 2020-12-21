@@ -1,6 +1,7 @@
 const fs = require( "fs");
 const path = require( "path");
 const {validationResult} = require('express-validator')
+const bcryptjs =require('bcryptjs')
 
 
 function getAllusers(){
@@ -34,6 +35,7 @@ register: (req, res) => {
          res.render('registrarse', {errors: errors.errors})
          return
      }
+     hashedPassword = bcryptjs.hashSync(req.body.password_1, 5)
     const newUser ={
     id: generateNewId(),
     nombre: req.body.full_name,
@@ -42,7 +44,7 @@ register: (req, res) => {
     foto_de_perfil: req.files[0].filename,
     email: req.body.email,
     username: req.body.username,
-    contraseña: req.body.password_1,
+    contraseña: hashedPassword,
     intereses: intereses
 } 
 const usersToSave = [...users, newUser];

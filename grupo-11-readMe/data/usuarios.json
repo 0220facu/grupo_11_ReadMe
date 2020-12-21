@@ -1,46 +1,16 @@
 [
  {
-  "id": 1,
-  "nombre": "pepe raul",
-  "nacimiento": "2002-10-01",
-  "direccion": "calle falsa 123",
-  "email": "peperaul123@email.com",
-  "username": "pepe uzumaki",
-  "contraseña": "holabuendiaa",
-  "intereses": [
-   null,
-   "cocina",
-   "Ciencia",
-   null,
-   ""
-  ]
+  "id": 1
  },
  {
-  "id": 9,
-  "nombre": "hola",
-  "nacimiento": "",
-  "direccion": "",
-  "foto_de_perfil": "1608496613790-Sasuke_Uchiha_1_HD.png",
-  "email": "hola@email.com",
-  "username": "sasuke",
-  "contraseña": "12345678",
-  "intereses": [
-   null,
-   null,
-   null,
-   null,
-   ""
-  ]
- },
- {
-  "id": 10,
+  "id": 2,
   "nombre": "naruto uzumaki",
-  "nacimiento": "2020-12-01",
+  "nacimiento": "2020-12-11",
   "direccion": "konoha 123",
-  "foto_de_perfil": "1608524894440-naruto.jpg",
+  "foto_de_perfil": "1608566887728-naruto.jpg",
   "email": "Naruto.Uzumaki@email.com",
   "username": "naruto",
-  "contraseña": "12345678",
+  "contraseña": "$2a$05$u.j2WlS69o4IRf8kMIEOnOcXsKWZO.BHYhKHo2NXiUFXl/tUum3ie",
   "intereses": [
    null,
    null,
