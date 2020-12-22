@@ -15,3 +15,7 @@ En el sprint anterior habiamos armado parte de lo que se solicitaba en este srpi
 es por ello que tenemos menos commits y menos push que anteriormente.
 Por otro lado armamos reuniones semanales y encuentros que nos permiten tener rutinas, 
 separar y dividir tareas y buscar errores que puedan aparecer.
+
+Sprint 5
+Con respecto al Sprint anterior, que por haber adelantado trabajo no tuvimos muchos commits y a su vez poco que agregar al mismo, en este nos encontramos con muchas cosas que hacer, que nos sirvieron para poner en práctica lo aprendido en las clases de Middlewares, donde algunos integrantes del grupo tenían algunos conceptos más afianzados que otros y la realizacion del trabajo en equipo nos sirvió para compartir los conocimientos y enseñarnos entre nosotros, asi tambien como a buscar soluciones por nuestra cuenta, ya que habían pasos que no se encontraban en las actividades y teoría de playground. 
+
