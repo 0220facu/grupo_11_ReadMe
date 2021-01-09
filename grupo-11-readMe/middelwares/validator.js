@@ -16,7 +16,7 @@ module.exports={
         .notEmpty()
         .withMessage('Debe ingresar una fecha de nacimiento')
         .bail(),
-        body('full_name')
+        body('name')
         .notEmpty()
         .withMessage('Debe ingresar un nombre')
         .bail(),
@@ -37,7 +37,7 @@ module.exports={
         .custom((value,{ req })=> {return value ==req.body.email})
         .notEmpty()
         .withMessage('Debe ingresar una fecha de nacimiento'),  
-        body('password_1')
+        body('password')
             .notEmpty()
             .withMessage('el campo password no puede quedar vacío')
             .bail()

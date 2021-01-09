@@ -1,8 +1,13 @@
 module.exports = (sequelize, DataTypes) => {
     const alias= 'writer'
     
-    const colums ={
-    name = DataTypes.STRING
+    const columns ={
+        id: {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true
+        },
+    name : DataTypes.STRING
     }
     
     const config = {
@@ -10,10 +15,16 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     }
     
+    const writer = sequelize.define(
+        alias,
+        columns,
+        config
+      );
+
     writer.associate = (models)=> {
         writer.hasMany(models.book,{
-        as = 'books',
-        foreingKey = 'book_id'
+        as : 'books',
+        foreingKey : 'writer_id'
         })
     }
     return writer

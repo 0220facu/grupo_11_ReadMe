@@ -3,23 +3,23 @@ module.exports = (sequelize, DataTypes) => {
     const alias = 'book'
 
 const columns ={
-    name = DataTypes.STRING,
-    year = datatypes.INTEGER,
-    price = datatypes.INTEGER,
-    language = datatypes.STRING,
-    synopsis = datatypes.STRING,
-    pages = datatypes.INTEGER,
-    famous = datatypes.INTEGER,
-    image = datatypes.STRING,
-    editorial_id = datatypes.INTEGER,
-    category_id  = datatypes.INTEGER,
-    writer_id = datatypes.INTEGER,
-
+    name : DataTypes.STRING,
+    year : DataTypes.INTEGER,
+    price : DataTypes.DECIMAL,
+    language : DataTypes.STRING,
+    synopsis : DataTypes.TEXT,
+    pages : DataTypes.INTEGER,
+    famous : DataTypes.INTEGER,
+    image : DataTypes.STRING,
+    editorial_id : DataTypes.INTEGER,
+    category_id  : DataTypes.INTEGER,
+    writer_id : DataTypes.INTEGER,
 }
 
 const config = {
     tablename: "books",
-    timestamps: true
+   
+    
   }
   const book = sequelize.define(
     alias,

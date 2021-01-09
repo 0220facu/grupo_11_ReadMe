@@ -1,8 +1,13 @@
 module.exports = (sequelize, DataTypes) => {
     const alias= 'editorial'
     
-    const colums ={
-    name = DataTypes.STRING
+    const columns ={
+        id: {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true
+        },
+    name : DataTypes.STRING
     }
     
     const config = {
@@ -10,10 +15,15 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     }
     
+    const editorial = sequelize.define(
+        alias,
+        columns,
+        config
+      );
     editorial.associate = (models)=> {
         editorial.hasMany(models.book,{
-        as = 'books',
-        foreingKey = 'book_id'
+        as : 'books',
+        foreingKey : 'editorial_id'
         })
     }
     return editorial

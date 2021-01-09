@@ -52,12 +52,9 @@
 <article>
   <label class="destacadosincentrar" for="categoria">Género : </label>
   <select name="categoria"class="contenedordetexto" id="categoria">
-    <option value="Programación">Programación</option>
-    <option value="Cocina">Cocina</option>
-    <option value="Ciencia">Ciencia</option>
-    <option value="Drama">Drama</option>
-    <option value="Ciencia ficción">Ciencia ficción</option>
-    <option value="Arte">Arte</option>
+    <%for(category of categories){%>
+      <option value="<%= category.id %> "><%= category.name %> </option> 
+      <% } %> 
     </select>
   </article>    
 <article>
