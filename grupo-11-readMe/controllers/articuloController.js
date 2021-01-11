@@ -1,7 +1,7 @@
 const fs = require( "fs") ;
 const path = require( "path") ;
 const db = require('../database/models')
-const {book , user, category} = require('../database/models')
+const {book } = require('../database/models')
 
 
 function getAllProducts(){
@@ -21,13 +21,11 @@ function generateNewId(){
 }
 
 const controller={
-    articulo: (req, res) => {
-        const products = getAllProducts()
+    articulo: async(req, res) => {
         const id = req.params.id;
-        const producto = products.find((product) => {
-            return product.id == id
-        })
-        res.render('articulo',{producto: producto,})
+        const product =await book.findByPk(id)
+        
+        res.render('articulo',{producto: product,})
     },
     crear:async (req,res) => {
         const products = getAllProducts()

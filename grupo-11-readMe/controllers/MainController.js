@@ -8,13 +8,14 @@ function getAllProducts(){
 }
 const controller={
     index: async (req, res) => { 
-        const products = book.findAll()
-        const destacados = products.filter( ( product)=> { 
-            return product.famous == 1
+        const products =await book.findAll({include: 'category'})
+        const destacados =await products.filter( ( product)=> { 
+           return product.famous == 1
         }) 
+
         res.render('index' , {
             products : products, 
-            destacados : destacados 
+         destacados : destacados 
          } ) },
 carrito: (req, res) => {
         res.render('carrito')
