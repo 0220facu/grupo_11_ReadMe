@@ -2,7 +2,7 @@ const { body } = require('express-validator');
 const readJSON = require('../helpers/readJSON');
 const path = require('path')
 const bcryptjs =require('bcryptjs')
-
+const {user} = require('../database/models')
 module.exports={
     register:[
         body('username')
@@ -16,7 +16,7 @@ module.exports={
         .notEmpty()
         .withMessage('Debe ingresar una fecha de nacimiento')
         .bail(),
-        body('full_name')
+        body('name')
         .notEmpty()
         .withMessage('Debe ingresar un nombre')
         .bail(),
@@ -37,7 +37,7 @@ module.exports={
         .custom((value,{ req })=> {return value ==req.body.email})
         .notEmpty()
         .withMessage('Debe ingresar una fecha de nacimiento'),  
-        body('password_1')
+        body('password')
             .notEmpty()
             .withMessage('el campo password no puede quedar vacío')
             .bail()
@@ -69,10 +69,10 @@ module.exports={
         .notEmpty()
         .withMessage('el campo email no puede quedar vacio')
         .bail()
-        .custom((value, { req }) => {
-        const users = readJSON()
-        const userFound = users.find(user => user.email == value)
-        return bcryptjs.compareSync(req.body.password, userFound.contraseña)}
+        .custom(async(value, { req }) => {
+        const users = await user.findAll();
+        const userFound = await users.find(user => user.email == value)
+        return await bcryptjs.compareSync(req.body.password, userFound.password)}
         )
         .withMessage('usuario o contraseña incorrectos')
        

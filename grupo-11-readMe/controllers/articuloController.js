@@ -1,103 +1,78 @@
 const fs = require( "fs") ;
 const path = require( "path") ;
-
-
-
-function getAllProducts(){
-    const productsFilePath = path.join(__dirname, '../data/productos.json');
-    return JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-}
-
-function writeProducts(productsToSave){
-	const productsToStringify = JSON.stringify(productsToSave, null, ' ');
-	return fs.writeFileSync('./data/productos.json', productsToStringify);
-	
-}
-
-function generateNewId(){
-	const products = getAllProducts();
-	return products.pop().id + 1;
-}
+const db = require('../database/models')
+const {book , category, writer, editorial } = require('../database/models')
 
 const controller={
-    articulo: (req, res) => {
-        const products = getAllProducts()
+    articulo: async(req, res) => {
         const id = req.params.id;
-        const producto = products.find((product) => {
-            return product.id == id
-        })
-        res.render('articulo',{producto: producto,})
+        const product =await book.findByPk(id)
+        
+        res.render('articulo',{producto: product,})
     },
-    crear: (req,res) => {
-        const products = getAllProducts()
-        res.render('admin',{ products : products,})
+    crear:async (req,res) => {
+        const products =await book.findAll({include: 'category', })
+        const categories = await category.findAll()
+        const writers = await writer.findAll()
+        const editorials = await editorial.findAll()
+        
+        res.render('admin',{ products : products,  categories, writers, editorials})
     },
-        subir: (req,res, next) =>{
-           console.log( req.body.genero)
-      const newProduct ={
-        id: generateNewId(),
-        titulo: req.body.titulo,
-        publicación : req.body.publicacion,
-        editorial:req.body.editorial,
-        idioma: req.body.idioma,
-        sinopsis:  req.body.sinopsis,
-        escritor: req.body.escritor,
-        categoria: req.body.genero,
-        paginas: req.body.paginas, 
-        precio: req.body.precio, 
-        destacado: req.body.destacado == undefined ? "No" : req.body.destacado ,
-        img: req.files[0].filename}
-          const products = getAllProducts();
-		const productsToSave = [...products, newProduct];
-        writeProducts(productsToSave);
+        subir: async (req,res, next) =>{
+      const newProduct =await book.create({
+        name : req.body.titulo,
+        year : req.body.publicacion,
+        language: req.body.idioma,
+        synopsis:  req.body.sinopsis,
+        pages : req.body.paginas, 
+        price: req.body.precio, 
+        famous: req.body.destacado == undefined ? 0 : 1 ,
+        image : req.files[0].filename,
+        category_id:req.body.categoria  ,  
+        editorial_id:req.body.editorial,  
+        writer_id:req.body.writer })    
         
         res.redirect('/');
 },
-editar: (req, res) => {
+editar: async (req, res) => {
     const id = req.params.id;
-    const products = getAllProducts();
-    const productoParaEditar = products.find((product) => {
-        return product.id == id
-    })
-    res.render('edit',{ products : products,productoParaEditar: productoParaEditar})
-},
-modificar: (req, res) =>{
-    const id = req.params.id;
-    const products = getAllProducts();
-    let productoEditado = products.map(product => {
-            if(product.id == id){
-        product.id= product.id,
-        product.titulo= req.body.titulo,
-        product.publicación = req.body.publicacion,
-        product.editorial=req.body.editorial,
-        product.destacado = req.body.destacado
-        product.idioma= req.body.idioma,
-        product.sinopsis=  req.body.sinopsis,
-        product.escritor= req.body.escritor,
-        product.categoria= req.body.categoria,
-        product.paginas= req.body.paginas, 
-        product.precio= req.body.precio, 
-        req.files[0].filename ? product.img= req.files[0].filename : product.img = product.img
-            }
-            return product
-    })
-        writeProducts(productoEditado);
-        
-        res.redirect('/');
-},
-eliminar:(req,res) =>{
-    const id = req.params.id;
-    const products = getAllProducts();
-    const productoborrado = products.filter((product) => {
-        return product.id != id
-    })
-    console.log(productoborrado)
-        writeProducts(productoborrado);
-        res.redirect('/');
-}
-   
-}
+    const products =await book.findAll({include: 'category'})
+    const categories = await category.findAll()
+    const writers = await writer.findAll()
+    const productoParaEditar = await book.findByPk(id, {include:['category', 'editorial', 'writer']})
+    const editorials = await editorial.findAll()
+    
+    
 
+    res.render('edit',{ products : products,productoParaEditar: productoParaEditar, writers, categories, editorials})
+},
+modificar: async (req, res) =>{
+    const id = req.params.id;
+    const productoParaEditar = await book.findByPk(id)
+  
+   await productoParaEditar.update({
+        name: req.body.titulo,
+        year: req.body.publicacion,
+        price: req.body.precio,
+        language: req.body.idioma,
+        synopsis: req.body.sinopsis,
+        pages: req.body.paginas,
+        famous: req.body.destacado == undefined ? 0 : 1 ,
+        image :  productoParaEditar.image,
+        editorial_id: req.body.editorial,
+        category_id: req.body.category,
+        writer_id: req.body.writer,
+        
+    })
+        res.redirect('/');
+},
+eliminar:async (req,res) =>{
+    const id = req.params.id;
+    const productoParaEditar = await book.findByPk(id)
+   await productoParaEditar.destroy()
+    res.redirect('/');
+}
+}
 module.exports = controller;
 
 

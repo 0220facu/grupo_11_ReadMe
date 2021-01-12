@@ -2,22 +2,7 @@ const fs = require( "fs");
 const path = require( "path");
 const {validationResult} = require('express-validator')
 const bcryptjs =require('bcryptjs')
-
-
-function getAllusers(){
-	const usersFilePath = path.join(__dirname, '../data/usuarios.json');
-    return JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-}
-function writeusers(userToSave){
-	const usersToStringify = JSON.stringify(userToSave, null, ' ');
-	return fs.writeFileSync('./data/usuarios.json', usersToStringify);
-	
-}
-
-function generateNewId(){
-	const users = getAllusers();
-	return users.pop().id + 1;
-}
+const {book , user, category} = require('../database/models')
 
 
 const controller={
@@ -27,34 +12,30 @@ const controller={
 register: (req, res) => {
         res.render('registrarse')
     },
-  crear: (req,res)=>{
-    const users = getAllusers()
-    const intereses=[req.body.proramacion, req.body.cocina, req.body.ciencia, req.body.kids,req.body.otros]  
+  crear: async(req , res) => {
+  
+  
     const errors = validationResult(req)
      if (!errors.isEmpty()){
          res.render('registrarse', {errors: errors.errors})
          return
      }
-     hashedPassword = bcryptjs.hashSync(req.body.password_1, 5)
-    const newUser ={
-    id: generateNewId(),
-    nombre: req.body.full_name,
-    nacimiento: req.body.birth_date,
-    direccion : req.body.adress,
-    foto_de_perfil: req.files[0].filename,
+   const  hashedPassword = bcryptjs.hashSync(req.body.password, 5)
+    
+
+    const newUser = await user.create({
+    name: req.body.name,
+    birth_date: req.body.birth_date,
+    adress : req.body.adress,
+    image : req.files[0].filename,
     email: req.body.email,
     username: req.body.username,
-    contraseña: hashedPassword,
-    intereses: intereses
-} 
-const usersToSave = [...users, newUser];
-writeusers(usersToSave);
-
-res.redirect('/');
+    password : hashedPassword,})
+return res.redirect('/');
 },
-ingresar:(req,res)=>{
-    const users = getAllusers();
-    const usuarioLogeado  = users.find((usuario)=> {
+ingresar:async(req,res)=>{
+    const users = await user.findAll();
+    const usuarioLogeado  =await users.find((usuario)=> {
         return usuario.email == req.body.username
      })
      const errors = validationResult(req)

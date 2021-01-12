@@ -1,5 +1,8 @@
 const fs = require( "fs") ;
 const path = require( "path") ;
+const db = require('../database/models')
+
+
 function getAllProducts(){
 	const productsFilePath = path.join(__dirname, '../data/productos.json');
     return JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));

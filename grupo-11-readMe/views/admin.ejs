@@ -6,7 +6,7 @@
     <p >seleccione libro para editar</p>    
         <section class="destacadoflex" > 
                 <% for ( product of products) { %> 
-            <a href="/articulo/edit/<%=product.id%>" class="sinDecoracion"><article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.categoria %> </article> <% } %></a> 
+            <a href="/articulo/edit/<%=product.id%>" class="sinDecoracion"><article class="libro" ><img class="total" src="/images/<%= product.image %>" alt="Caperucita roja"><%= product.category.name %> </article> <% } %></a> 
             </section>
         </div>
   </div>
@@ -22,14 +22,22 @@
     <label for="img" class="destacadosincentrar">Imagen:</label>
     <input type="file"class="contenedordetexto" name="img" id=img>
   </article>
-<article> 
-    <label class="destacadosincentrar" for="nombre"> Escritor:</label>
-    <input type="text" name="escritor" class="contenedordetexto" id="es critor" required >
-</article>
-<article>
-  <label class="destacadosincentrar" for="editorial">Editorial:</label>
-  <input type="text" name="editorial" class="contenedordetexto" id="editorial" required>
-</article>
+  <article>
+    <label class="destacadosincentrar" for="categoria">Escritor : </label>
+   <select name="writer"class="contenedordetexto" id="categoria">
+     <% for(writer of writers){%>
+       <option value="<%= writer.id %> "><%=writer.name %> </option> 
+       <% } %> 
+     </select>
+   </article>   
+   <article>
+    <label class="destacadosincentrar" for="categoria">Editorial : </label>
+   <select name="editorial"class="contenedordetexto" id="categoria">
+     <% for(editorial of editorials){%>
+       <option value="<%= editorial.id %> "><%=editorial.name %> </option> 
+       <% } %> 
+     </select>
+   </article>   
 <article> 
   <label class="destacadosincentrar" for="año">Año de publicación:</label>
   <input type="text" name="publicacion"class="contenedordetexto" id="publicacion" required>
@@ -50,16 +58,13 @@
 <article class="contenedordetexto" ><label class="destacadosincentrar" for="destacado" > Destacar producto</label>
   <input type="checkbox" id="destacado" name="destacado" value="SI"></article>
 <article>
-  <label class="destacadosincentrar" for="categoria">Género : </label>
+   <label class="destacadosincentrar" for="categoria">Género : </label>
   <select name="categoria"class="contenedordetexto" id="categoria">
-    <option value="Programación">Programación</option>
-    <option value="Cocina">Cocina</option>
-    <option value="Ciencia">Ciencia</option>
-    <option value="Drama">Drama</option>
-    <option value="Ciencia ficción">Ciencia ficción</option>
-    <option value="Arte">Arte</option>
+    <% for(category of categories){%>
+      <option value="<%= category.id %> "><%=category.name %> </option> 
+      <% } %> 
     </select>
-  </article>    
+  </article>   
 <article>
   <label class="destacadosincentrar" for="sinopsis">Sinopsis</label> <br>
   <textarea name="sinopsis" id="sinopsis" cols="60" rows="7" > </textarea>
