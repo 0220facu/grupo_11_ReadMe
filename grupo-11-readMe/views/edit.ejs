@@ -6,64 +6,82 @@
     <p >seleccione libro para editar</p>    
         <section class="destacadoflex" > 
                 <% for ( product of products) { %> 
-            <a class="sinDecoracion" href="/articulo/edit/<%=product.id%>"><article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.titulo %> </article> <% } %></a> 
+            <a class="sinDecoracion" href="/articulo/edit/<%=product.id%>"><article class="libro" ><img class="total" src="/images/<%= product.image %>" alt="Caperucita roja"><%= product.name %> </article> <% } %></a> 
             </section>
         </div>
 
   </div>
 </div>
-<h2 class="destacado">estas editando el libro: <%=product.titulo%></h2>
-<form action="/admin/edit/<%=product.id%>?_method=PUT" method="POST">   
+<h2 class="destacado">estas editando el libro: <%=productoParaEditar.name%></h2>
+<form action="/articulo/edit/<%= productoParaEditar.id%>?_method=PUT" method="POST">   
 <section class="contenedorflex">  
 <article>
     <label class="destacadosincentrar" for="titulo">Título del libro:</label>
-      <input type="text" class="contenedordetexto" name="titulo" id="titulo"value="<%= productoParaEditar.titulo %>" required>
+      <input type="text" class="contenedordetexto" name="titulo" id="titulo"value="<%= productoParaEditar.name %>" required>
   </article>
-<article> 
-    <label class="destacadosincentrar" for="nombre"> Escritor:</label>
-    <input type="text" name="escritor" class="contenedordetexto"value="<%= productoParaEditar.escritor %>" id="escritor" required >
-</article>
-<article>
-  <label class="destacadosincentrar" for="editorial">Editorial:</label>
-  <input type="text" name="editorial" class="contenedordetexto" id="editorial"value="<%= productoParaEditar.editorial %>" required>
-</article>
+  <article>
+    <label class="destacadosincentrar" for="categoria">Escritor : </label>
+   <select name="writer"class="contenedordetexto" id="writer">
+     <% for(writer of writers){%>
+      <% if(writer.id == productoParaEditar.writer.id) {%> 
+       <option selected value="<%= writer.id %> "><%=writer.name %> </option> 
+       <% }else { %> 
+        <option  value="<%= writer.id %> "><%=writer.name %> </option> 
+       <% } %> 
+       <% } %> 
+     </select>
+   </article>   
+   <article>
+    <label class="destacadosincentrar" for="categoria">Editorial : </label>
+   <select name="editorial"class="contenedordetexto" id="categoria">
+     <% for(editorial of editorials){%>
+      <% if(editorial.id == productoParaEditar.editorial.id) {%> 
+        <option selected value="<%= editorial.id %> "><%=editorial.name %> </option> 
+        <% }else { %> 
+         <option  value="<%= editorial.id %> "><%=editorial.name %> </option> 
+        <% } %> 
+       <% } %> 
+     </select>
+   </article>   
 <article>
   <label for="img" class="destacadosincentrar">Imagen:</label>
-  <input type="file"class="contenedordetexto"value="<%= productoParaEditar.img %>" name="img" id=img>
+  <input type="file"class="contenedordetexto"  name="img" id=img>
+</article>
+<article class="contenedordetexto" ><label class="destacadosincentrar" for="destacado" > Destacar producto</label>
+  <input type="checkbox" id="destacado" name="destacado" value="SI"></article>
 </article>
 <article> 
   <label class="destacadosincentrar" for="año">Año de publicación:</label>
-  <input type="text" name="publicacion"class="contenedordetexto" id="publicacion"value="<%= productoParaEditar.publicacion %>" required>
+  <input type="text" name="publicacion"class="contenedordetexto" id="publicacion"value="<%= productoParaEditar.year %>" required>
 </article>
 <article>
   <label class="destacadosincentrar" for="paginas">Cantidad de páginas:</label>
-  <input type="text" name="paginas"class="contenedordetexto" id="paginas"value="<%= productoParaEditar.paginas %>" required>
+  <input type="text" name="paginas"class="contenedordetexto" id="paginas"value="<%= productoParaEditar.pages %>" required>
 </article>
 <article>
   <label class="destacadosincentrar" for="precio">precio:</label>
-  <input type="number" name="precio"class="contenedordetexto" id="precio" value="<%= productoParaEditar.precio   %>"required>
+  <input type="number" name="precio"class="contenedordetexto" id="precio" value="<%= productoParaEditar.price   %>"required>
 </article>
 
 <article>
   <label class="destacadosincentrar" for="idioma">Idioma:</label>
-  <input type="text" name="idioma"class="contenedordetexto" id="idioma"value="<%= productoParaEditar.idioma %>"required>
+  <input type="text" name="idioma"class="contenedordetexto" id="idioma"value="<%= productoParaEditar.language %>"required>
 </article>
-<article class="contenedordetexto" ><label class="destacadosincentrar" for="destacado"  > Destacar producto</label>
-  <input type="checkbox" id="destacado" name="destacado" <%= productoParaEditar.destacado == "si"?  "checked" : "" %> > </article>
 <article>
-  <label class="destacadosincentrar" for="categoria" >Género : </label>
-  <select name="categoria"class="contenedordetexto" value="<%= productoParaEditar.categoria %>"id="categoria">
-    <option value="Programación">Programación</option>
-    <option value="Cocina">Cocina</option>
-    <option value="Ciencia">Ciencia</option>
-    <option value="Drama">Drama</option>
-    <option value="Ciencia ficción">Ciencia ficción</option>
-    <option value="Arte">Arte</option>
-    </select>
-  </article>    
+  <label class="destacadosincentrar" for="categoria">Categoria : </label>
+ <select name="category"class="contenedordetexto" id="category">
+   <% for(category of categories){%>
+    <% if(category.id == productoParaEditar.category.id) {%> 
+      <option selected value="<%= category.id %> "><%=category.name %> </option> 
+      <% }else { %> 
+       <option  value="<%= category.id %> "><%=category.name %> </option> 
+      <% } %> 
+     <% } %> 
+   </select>
+ </article>   
 <article>
   <label class="destacadosincentrar" for="sinopsis">Sinopsis</label> <br>
-  <textarea name="sinopsis" id="sinopsis" cols="60" rows="7" ><%= productoParaEditar.sinopsis %> </textarea>
+  <textarea name="sinopsis" id="sinopsis" cols="60" rows="7" ><%= productoParaEditar.synopsis %> </textarea>
   </section>
 <article class="contenedorbotones">
   <button type="submit" class="boton3" >Enviar </button>

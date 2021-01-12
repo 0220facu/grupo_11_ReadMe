@@ -2,7 +2,7 @@ const { body } = require('express-validator');
 const readJSON = require('../helpers/readJSON');
 const path = require('path')
 const bcryptjs =require('bcryptjs')
-
+const {user} = require('../database/models')
 module.exports={
     register:[
         body('username')
@@ -69,10 +69,10 @@ module.exports={
         .notEmpty()
         .withMessage('el campo email no puede quedar vacio')
         .bail()
-        .custom((value, { req }) => {
-        const users = readJSON()
-        const userFound = users.find(user => user.email == value)
-        return bcryptjs.compareSync(req.body.password, userFound.contraseña)}
+        .custom(async(value, { req }) => {
+        const users = await user.findAll();
+        const userFound = await users.find(user => user.email == value)
+        return await bcryptjs.compareSync(req.body.password, userFound.password)}
         )
         .withMessage('usuario o contraseña incorrectos')
        

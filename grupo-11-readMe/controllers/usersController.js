@@ -4,21 +4,6 @@ const {validationResult} = require('express-validator')
 const bcryptjs =require('bcryptjs')
 const {book , user, category} = require('../database/models')
 
-function getAllusers(){
-	const usersFilePath = path.join(__dirname, '../data/usuarios.json');
-    return JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-}
-function writeusers(userToSave){
-	const usersToStringify = JSON.stringify(userToSave, null, ' ');
-	return fs.writeFileSync('./data/usuarios.json', usersToStringify);
-	
-}
-
-function generateNewId(){
-	const users = getAllusers();
-	return users.pop().id + 1;
-}
-
 
 const controller={
     login: (req, res) => {
@@ -48,9 +33,9 @@ register: (req, res) => {
     password : hashedPassword,})
 return res.redirect('/');
 },
-ingresar:(req,res)=>{
-    const users = getAllusers();
-    const usuarioLogeado  = users.find((usuario)=> {
+ingresar:async(req,res)=>{
+    const users = await user.findAll();
+    const usuarioLogeado  =await users.find((usuario)=> {
         return usuario.email == req.body.username
      })
      const errors = validationResult(req)
