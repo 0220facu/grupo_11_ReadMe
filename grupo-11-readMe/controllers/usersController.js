@@ -9,8 +9,9 @@ const controller={
     login: (req, res) => {
         res.render('iniciarSesion')
     },
-register: (req, res) => {
-        res.render('registrarse')
+register:async (req, res) => {
+    const categories = await category.findAll()
+        res.render('registrarse',{categories})
     },
   crear: async(req , res) => {
   
@@ -22,7 +23,7 @@ register: (req, res) => {
      }
    const  hashedPassword = bcryptjs.hashSync(req.body.password, 5)
     
-
+const categories =req.body.categories
     const newUser = await user.create({
     name: req.body.name,
     birth_date: req.body.birth_date,
@@ -31,7 +32,9 @@ register: (req, res) => {
     email: req.body.email,
     username: req.body.username,
     password : hashedPassword,})
-return res.redirect('/');
+    
+   await newUser.setCategories(categories)
+    return res.redirect('/');
 },
 ingresar:async(req,res)=>{
     const users = await user.findAll();

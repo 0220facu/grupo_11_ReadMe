@@ -7,8 +7,8 @@ const controller={
     articulo: async(req, res) => {
         const id = req.params.id;
         const product =await book.findByPk(id)
-        
-        res.render('articulo',{producto: product,})
+        const categories = await category.findAll()
+        res.render('articulo',{producto: product, categories})
     },
     crear:async (req,res) => {
         const products =await book.findAll({include: 'category', })
