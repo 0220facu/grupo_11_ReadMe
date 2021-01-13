@@ -47,18 +47,10 @@
             </article>
             <section>
                 <h2 class="destacadosincentrar">Intereses</h2>
-                <input type="checkbox" name="Programacion" id="programacion" value="programacion">
-                <label class="destacadosincentrar" for="">programacion</label>
-                <input type="checkbox" name="cocina" id="cocina" value="cocina"> 
-                <label class="destacadosincentrar" for="">Cocina</label>
-                <input type="checkbox" name="ciencia" id="ciencia" value="Ciencia"> 
-                <label class="destacadosincentrar" for="">Ciencia</label>
-                <input type="checkbox" name="ciencia-ficcion" id="ciencia-ficcion" value="ciencia-ficcion"> 
-                <label class="destacadosincentrar" for="">Ciencia Ficcion</label>
-                <input type="checkbox" name="kids" id="kids" value="kids"> 
-                <label class="destacadosincentrar" for="">Niños</label>
-            <article> <label for="otros" class="destacadosincentrar">otros</label>
-            <input type="text" name="otros" class="contenedordetexto" id="otros" placeholder="otros"></article>
+                <% for(category of categories){ %> 
+                <input type="checkbox" name="categories" value="<%= category.id %>" ><%= category.name %> 
+               <% } %> 
+           
             </section>
             <article class="contenedorbotones">
                 <button class="boton3" type="submit">Enviar</button>
