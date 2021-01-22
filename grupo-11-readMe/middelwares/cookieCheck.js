@@ -1,6 +1,5 @@
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-const readJSON = require('../helpers/ReadJSON')
 const {user} = require('../database/models')
 
 module.exports=  
