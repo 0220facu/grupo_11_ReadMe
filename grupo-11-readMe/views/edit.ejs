@@ -13,6 +13,11 @@
   </div>
 </div>
 <h2 class="destacado">estas editando el libro: <%=productoParaEditar.name%></h2>
+<% if(typeof errors !='undefined') { %>
+  <% for (error of errors) { %>
+      <p class="error"><%= error.msg %> </p>
+  <% } %>
+  <% } %>
 <form action="/articulo/edit/<%= productoParaEditar.id%>?_method=PUT" method="POST">   
 <section class="contenedorflex">  
 <article>

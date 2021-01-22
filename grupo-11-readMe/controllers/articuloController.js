@@ -2,6 +2,7 @@ const fs = require( "fs") ;
 const path = require( "path") ;
 const db = require('../database/models')
 const {book , category, writer, editorial } = require('../database/models')
+const {validationResult} = require('express-validator')
 
 const controller={
     articulo: async(req, res) => {
@@ -19,6 +20,17 @@ const controller={
         res.render('admin',{ products : products,  categories, writers, editorials})
     },
         subir: async (req,res, next) =>{
+
+        const errors = validationResult(req)
+
+        if (!errors.isEmpty()){
+        const products =await book.findAll({include: 'category', })
+        const categories = await category.findAll()
+        const writers = await writer.findAll()
+        const editorials = await editorial.findAll()
+            res.render('admin', {errors: errors.errors, products : products, categories, writers, editorials })
+            return
+        }
       const newProduct =await book.create({
         name : req.body.titulo,
         year : req.body.publicacion,
@@ -47,8 +59,19 @@ editar: async (req, res) => {
     res.render('edit',{ products : products,productoParaEditar: productoParaEditar, writers, categories, editorials})
 },
 modificar: async (req, res) =>{
+    
     const id = req.params.id;
-    const productoParaEditar = await book.findByPk(id)
+    const productoParaEditar = await book.findByPk(id, {include:['category', 'editorial', 'writer']})
+    const errors = validationResult(req)
+
+    if (!errors.isEmpty()){
+        const products =await book.findAll({include: 'category', })
+        const categories = await category.findAll()
+        const writers = await writer.findAll()
+        const editorials = await editorial.findAll()
+            res.render('edit', {errors: errors.errors, products : products, categories, writers, editorials, productoParaEditar })
+            return
+        }    
   
    await productoParaEditar.update({
         name: req.body.titulo,

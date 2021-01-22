@@ -1,5 +1,4 @@
 const { body } = require('express-validator');
-const readJSON = require('../helpers/readJSON');
 const path = require('path')
 const bcryptjs =require('bcryptjs')
 const {user} = require('../database/models')
@@ -17,8 +16,8 @@ module.exports={
         .withMessage('Debe ingresar una fecha de nacimiento')
         .bail(),
         body('name')
-        .notEmpty()
-        .withMessage('Debe ingresar un nombre')
+        .isLength({ min: 2 })
+        .withMessage('su nombre es obligatorio y debe tener minimo 2 caracteres')
         .bail(),
         body('email')
         .notEmpty()
@@ -28,11 +27,17 @@ module.exports={
         .withMessage('Debe ingresar un email valido')
         .bail()
         .custom(emailValue => {
-            const users = readJSON();
-            const userFound = users.find(user => user.email == emailValue)
-            return !userFound
-        })     
-        .withMessage('este email ya se encuentra registrado'),
+            return user.findOne({
+                where: {
+                    email: emailValue
+                }
+            })
+            .then(user =>{
+                if(user){
+                    return Promise.reject('Email registrado');
+                }
+            })
+        }),     
         body('email2')
         .custom((value,{ req })=> {return value ==req.body.email})
         .notEmpty()
@@ -69,12 +74,51 @@ module.exports={
         .notEmpty()
         .withMessage('el campo email no puede quedar vacio')
         .bail()
-        .custom(async(value, { req }) => {
-        const users = await user.findAll();
-        const userFound = await users.find(user => user.email == value)
-        return await bcryptjs.compareSync(req.body.password, userFound.password)}
-        )
+        .custom((value, { req }) =>{
+            return user.findOne({
+                where: {
+                    email: value
+                }
+            })
+            .then(user => {
+                if(!user || !bcryptjs.compareSync(req.body.password, user.password)){
+                    return Promise.reject('El email y la contraseña no coinciden');
+                }
+            })
+        } )
+        
         .withMessage('usuario o contraseña incorrectos')
        
-    ]
+    ],
+Create:[
+    body('titulo')
+    .isLength({ min: 4 })
+        .withMessage('el titulo del libro debe tener minimo 5 caracteres')
+        .bail(),
+    body('sinopsis')
+    .isLength({ min: 20 })
+        .withMessage('la descripción del libro debe tener minimo 20 caracteres')
+        .bail(),
+    body('img')
+    .custom((valueImg, { req }) => req.files[0])
+        .withMessage('debes ingresar una imagen de perfil')
+        .bail()
+    .custom((value , { req })=>{
+        const extencionesAceptadas = ['.png', '.jpg', '.jpeg']
+        const extencion = path.extname(req.files[0].originalname);
+        return extencionesAceptadas.includes(extencion)
+    
+      })
+      .withMessage('extención no valida'),
+],
+Edit:[
+    body('titulo')
+    .isLength({ min: 4 })
+        .withMessage('el titulo del libro debe tener minimo 5 caracteres')
+        .bail(),
+    body('sinopsis')
+    .isLength({ min: 20 })
+        .withMessage('la descripción del libro debe tener minimo 20 caracteres')
+        .bail()
+]
 }

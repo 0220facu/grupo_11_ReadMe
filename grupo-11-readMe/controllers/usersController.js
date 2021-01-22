@@ -10,6 +10,7 @@ const controller={
         res.render('iniciarSesion')
     },
 register:async (req, res) => {
+
     const categories = await category.findAll()
         res.render('registrarse',{categories})
     },
@@ -17,8 +18,9 @@ register:async (req, res) => {
   
   
     const errors = validationResult(req)
+    const categoriesDB = await category.findAll()
      if (!errors.isEmpty()){
-         res.render('registrarse', {errors: errors.errors})
+         res.render('registrarse', {errors: errors.errors , categories: categoriesDB})
          return
      }
    const  hashedPassword = bcryptjs.hashSync(req.body.password, 5)
