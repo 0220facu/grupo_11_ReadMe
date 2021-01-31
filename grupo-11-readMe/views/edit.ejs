@@ -18,11 +18,12 @@
       <p class="error"><%= error.msg %> </p>
   <% } %>
   <% } %>
-<form action="/articulo/edit/<%= productoParaEditar.id%>?_method=PUT" method="POST">   
+<ul id="errors" class="error"></ul>
+<form id="formulario" action="/articulo/edit/<%= productoParaEditar.id%>?_method=PUT" method="POST">   
 <section class="contenedorflex">  
 <article>
     <label class="destacadosincentrar" for="titulo">Título del libro:</label>
-      <input type="text" class="contenedordetexto" name="titulo" id="titulo"value="<%= productoParaEditar.name %>" required>
+      <input type="text" class="contenedordetexto" name="titulo" id="titulo"value="<%= productoParaEditar.name %>" >
   </article>
   <article>
     <label class="destacadosincentrar" for="categoria">Escritor : </label>
@@ -101,4 +102,5 @@
 </main>
 <footer></footer>
 </body>
+<script src="/javascripts/edit_validation.js"></script>
 </html>
