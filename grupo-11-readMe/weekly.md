@@ -15,3 +15,11 @@ Una vez con cada uno termino con su parte sin problemas y logro que sus funciona
 Sprint 6.
 Siguiendo con la metodologia anterior, armamos encuentros semanales para afirmar conceptos, generar nuevos archivos desde cero para mejorar la practica y resolver  errores recurrentes. La idea es ir incorporando lo aprendido en clase arrancando desde el principio. 
 Durante este periodo, nos tomamos el tiempo de codear en conjunto. Armar esquemas en el trello, para seguir un esquema de trabajo, division y seguimiento de tareas. estipular los tiempos en que cada uno debia completar el/los item.
+
+Sprint 7
+Sprint 6.
+Siguiendo con la metodología anterior, armamos encuentros semanales para afirmar conceptos, generar nuevos archivos desde cero para mejorar la practica y resolver  errores recurrentes. La idea es ir incorporando lo aprendido en clase arrancando desde el principio. 
+Durante este periodo, nos tomamos el tiempo de codear en conjunto. Armar esquemas en el trello, para seguir un esquema de trabajo, division y seguimiento de tareas. estipular los tiempos en que cada uno debía completar el/los item.
+
+Sprint 7.
+En este momento del proyecto tomamos mas en consideración, el debatir las tareas a realizar en conjunto, distribuyendo responsabilidad de cada uno en la asignación de cada una de ellas.
