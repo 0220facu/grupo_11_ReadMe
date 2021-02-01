@@ -6,4 +6,6 @@ const controller = {
         res.json(users);
     }
 }
-module.exports = controller
+
+module.exports = controller ;
+
