@@ -1,31 +1,36 @@
-let formulario = document.querySelector("form") ;
-   
-   formulario.addEventListener( "submit", function(event) { 
+
+const titulo = document.querySelector("#titulo") ;
+const descripcion = document.querySelector("#sinopsis") ;
+const errorsElement = document.querySelector("#errors") ;  
+const boton = document.querySelector("#boton") ;  
+const image = document.querySelector("#img") ;  
+errorsElement.style.display="none"
+
+boton.addEventListener( "click", (event)=> { 
         event.preventDefault()  
-    
-        let nombre = document.querySelector("#titulo") ;
-        let descripcion = document.querySelector("#sinopsis") ;
-        let errores = [] ;
-        let errorsElement = document.querySelector("#errors") ;
-        const ext = this.image.files[0].type; 
+        const errors = [] ;
+        errorsElement.innerHTML = '' 
 
-        if( nombre.value.length < 5 ){ 
-        errores.push( "El campo título debe tener como mínimo 5 caracteres") 
+        if (titulo.value.trim().length <= 5) {
+            errors.push("El campo de nombre debe tener al menos 5 caracteres");    
         }
-        if( descripcion.value.length < 20 ){
-            errores.push("La sinopsis debe tener 20 caracteres como mínimo")
-        }    
-        if(!(ext == "image/jpeg" || ext == "image/png" || ext == "image/csv" || ext == "image/jpg")){ 
-                  errors.push('La imagen tiene una extensión inválida.')}
-        if (!errores.length) {
-            form.submit()
-        }
-        for (const error of errores) {
-            errorsElement.innerHTML += `<li>${error}</li>`
-        }
-})
+        if (sinopsis.value.length <= 20) {
+            errors.push("El campo descripcion debe ser al menos de 20 caracteres");    
+        }
+        if (image.value == "") {
+            errors.push('Debe cargar la imagen del producto.');
+        } else {
+        const extencion = this.image.files[0].type;   
+        if(!(extencion == "image/jpeg" || extencion == "image/png" || extencion == "image/csv" || extencion == "image/jpg")){ 
+        errors.push('La imagen tiene una extensión inválida.')}} 
 
-
-
-  
-  
+        errorsElement.style.display="block"
+        if (!errors.length) {
+            form.submit()
+            }
+        for (const error of errors) {
+            errorsElement.innerHTML += `<li>${error}</li>`
+        }
+       
+        
+}) 
