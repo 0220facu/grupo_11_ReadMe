@@ -4,13 +4,13 @@ let email = document.querySelector('#email');
 let password = document.querySelector('#password_1');
 let errorsElement = document.querySelector('#errors');
 let button = document.querySelector('#boton');
-
+errorsElement.style.display="none"
 
 
 button.addEventListener("click", (event)=>{
       
     event.preventDefault()
-   const errors = []
+    const errors = []
     errorsElement.innerHTML = '' 
     
     if(nombre.value.trim().length <= 2){
@@ -37,6 +37,8 @@ button.addEventListener("click", (event)=>{
         errors.push('su contraseña debe tener como minimo 8 caracteres')
     }
 
+    errorsElement.style.display="block"
+    
     if (!errors.length) {
                form.submit()
     }
@@ -44,5 +46,4 @@ button.addEventListener("click", (event)=>{
     for (const error of errors) {
         errorsElement.innerHTML += `<li>${error}</li>`
     }
-   console.log(errors)
 })
