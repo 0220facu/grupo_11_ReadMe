@@ -6,7 +6,8 @@
                 <p class="error"><%= error.msg %> </p>
             <% } %>
             <% } %>
-        <form action="/users/register" method="POST" enctype="multipart/form-data">
+            <ul id="errors" class="error"></ul>
+        <form action="/users/register" id="form" method="POST" enctype="multipart/form-data">
         <div class="contenedorflex">
             
             <article>
@@ -53,11 +54,11 @@
            
             </section>
             <article class="contenedorbotones">
-                <button class="boton3" type="submit">Enviar</button>
+                <button class="boton3" id="boton" type="submit">Enviar</button>
             </article>
               </form>     
         </div>
-       
+    <script src="/javascripts/register_validation.js"></script>
     </main>
     <footer></footer>
 </body>

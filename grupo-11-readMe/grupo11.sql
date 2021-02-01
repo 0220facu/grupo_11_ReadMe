@@ -2,7 +2,7 @@ CREATE SCHEMA Grupo_11;
 
 USE Grupo_11;
 
-CREATE TABLE user (
+CREATE TABLE users (
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 name VARCHAR(50) NOT NULL,
 birth_date DATETIME, 	
@@ -19,7 +19,7 @@ created_at DATETIME DEFAULT CURRENT_TIMESTAMP, -- Fecha de alta
 
 );
 
-CREATE TABLE book(
+CREATE TABLE books  (
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 name VARCHAR(50) NOT NULL,
 year VARCHAR(5) NOT NULL,
@@ -40,7 +40,7 @@ created_at DATETIME DEFAULT CURRENT_TIMESTAMP, -- Fecha de alta
 
 );
 
-CREATE TABLE category(
+CREATE TABLE categories(
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 name VARCHAR(50) NOT NULL,
 
@@ -50,17 +50,17 @@ created_at DATETIME DEFAULT CURRENT_TIMESTAMP, -- Fecha de alta
 
 );
 
-CREATE TABLE editorial(
+CREATE TABLE editorials(
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 name VARCHAR(50) NOT NULL,
 
-created_at DATETIME DEFAULT CURRENT_TIMESTAMP, -- Fecha de alta
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP, -- Fecha de altass
     updated_at DATETIME ON UPDATE CURRENT_TIMESTAMP, -- Fecha de modificación
     deleted_at DATETIME -- Fecha de borrado del registro completo
 
 );
 
-CREATE TABLE writer(
+CREATE TABLE writers(
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 name VARCHAR(50) NOT NULL,
 birth_date DATETIME, 	

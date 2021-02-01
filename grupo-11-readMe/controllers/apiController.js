@@ -5,4 +5,6 @@ const controller = {
         const users = await user.findAll()
         res.json(users);
     }
+  
 }
+module.exports= controller
