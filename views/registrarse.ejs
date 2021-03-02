@@ -6,16 +6,17 @@
                 <p class="error"><%= error.msg %> </p>
             <% } %>
             <% } %>
-        <form action="/users/register" method="POST" enctype="multipart/form-data">
+            <ul id="errors" class="error"></ul>
+        <form action="/users/register" id="form" method="POST" enctype="multipart/form-data">
         <div class="contenedorflex">
             
             <article>
-                <label class="destacadosincentrar" for="full-name">Nombre</label>
-                <input type="text" class="contenedordetexto" name="full_name" id="full_name" placeholder="Nombre y apellido">
+                <label class="destacadosincentrar" for="name">Nombre</label>
+                <input type="text" class="contenedordetexto" name="name" id="name" placeholder="Nombre y apellido">
             </article>
             
             <article>
-                <label class="destacadosincentrar" for="birth-date">Fecha de nacimiento</label>
+                <label class="destacadosincentrar" for="birth_date">Fecha de nacimiento</label>
                 <input type="date" name="birth_date" class="contenedordetexto" id="birth_date">
             </article>
             <article>
@@ -36,36 +37,28 @@
             </article>
             <articlE>
                 <label class="destacadosincentrar" for="picture">Elegí tu foto de usuario</label>
-                <input type="file" name="picture" id="picture" class="contenedordetexto" value="Seleccionar archivo">
+                <input type="file" name="image" id="picture" class="contenedordetexto" value="Seleccionar archivo">
             </article>
             <article>
                 <label class="destacadosincentrar" for="password">Elegí tu contraseña</label>
-                <input type="password" name="password_1" class="contenedordetexto" id="password_1" placeholder="Elegí tu contraseña">
+                <input type="password" name="password" class="contenedordetexto" id="password_1" placeholder="Elegí tu contraseña">
             </article>
             <article>   <label class="destacadosincentrar" for="password-2">Confirma tu contraseña</label>
                 <input type="password" name="password_2" id="password_2" class="contenedordetexto" placeholder="Confirma tu contraseña">
             </article>
             <section>
                 <h2 class="destacadosincentrar">Intereses</h2>
-                <input type="checkbox" name="Programacion" id="programacion" value="programacion">
-                <label class="destacadosincentrar" for="">programacion</label>
-                <input type="checkbox" name="cocina" id="cocina" value="cocina"> 
-                <label class="destacadosincentrar" for="">Cocina</label>
-                <input type="checkbox" name="ciencia" id="ciencia" value="Ciencia"> 
-                <label class="destacadosincentrar" for="">Ciencia</label>
-                <input type="checkbox" name="ciencia-ficcion" id="ciencia-ficcion" value="ciencia-ficcion"> 
-                <label class="destacadosincentrar" for="">Ciencia Ficcion</label>
-                <input type="checkbox" name="kids" id="kids" value="kids"> 
-                <label class="destacadosincentrar" for="">Niños</label>
-            <article> <label for="otros" class="destacadosincentrar">otros</label>
-            <input type="text" name="otros" class="contenedordetexto" id="otros" placeholder="otros"></article>
+                <% for(category of categories){ %> 
+                <input type="checkbox" name="categories" value="<%= category.id %>" ><%= category.name %> 
+               <% } %> 
+           
             </section>
             <article class="contenedorbotones">
-                <button class="boton3" type="submit">Enviar</button>
+                <button class="boton3" id="boton" type="submit">Enviar</button>
             </article>
               </form>     
         </div>
-       
+    <script src="/javascripts/register_validation.js"></script>
     </main>
     <footer></footer>
 </body>

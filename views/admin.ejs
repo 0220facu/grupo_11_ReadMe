@@ -6,69 +6,82 @@
     <p >seleccione libro para editar</p>    
         <section class="destacadoflex" > 
                 <% for ( product of products) { %> 
-            <a href="/articulo/edit/<%=product.id%>" class="sinDecoracion"><article class="libro" ><img class="total" src="/images/<%= product.img %>" alt="Caperucita roja"><%= product.categoria %> </article> <% } %></a> 
+            <a href="/articulo/edit/<%=product.id%>" class="sinDecoracion"><article class="libro" ><img class="total" src="/images/<%= product.image %>" alt="Caperucita roja"><%= product.category.name %> </article> <% } %></a> 
             </section>
         </div>
   </div>
 </div>
+<% if(typeof errors !='undefined') { %>
+  <% for (error of errors) { %>
+      <p class="error"><%= error.msg %> </p>
+  <% } %>
+  <% } %>
+  
 <h2 class="destacado">Agregar nuevo libro</h2>
+<ul class="error" id="errors"></ul>
 <form action="/articulo/crear" method="POST" enctype="multipart/form-data">   
 <section class="contenedorflex">  
 <article>
     <label class="destacadosincentrar" for="titulo">Título del libro:</label>
-      <input type="text" class="contenedordetexto" name="titulo" id="titulo" required>
+      <input type="text" class="contenedordetexto" name="titulo" id="titulo" >
   </article>
   <article>
     <label for="img" class="destacadosincentrar">Imagen:</label>
-    <input type="file"class="contenedordetexto" name="img" id=img>
+    <input type="file"class="contenedordetexto" name="img" id="img">
   </article>
-<article> 
-    <label class="destacadosincentrar" for="nombre"> Escritor:</label>
-    <input type="text" name="escritor" class="contenedordetexto" id="es critor" required >
-</article>
-<article>
-  <label class="destacadosincentrar" for="editorial">Editorial:</label>
-  <input type="text" name="editorial" class="contenedordetexto" id="editorial" required>
-</article>
+  <article>
+    <label class="destacadosincentrar" for="categoria">Escritor : </label>
+   <select name="writer"class="contenedordetexto" id="escritor">
+     <% for(writer of writers){%>
+       <option value="<%= writer.id %> "><%=writer.name %> </option> 
+       <% } %> 
+     </select>
+   </article>   
+   <article>
+    <label class="destacadosincentrar" for="categoria">Editorial : </label>
+   <select name="editorial"class="contenedordetexto" id="editorial">
+     <% for(editorial of editorials){%>
+       <option value="<%= editorial.id %> "><%=editorial.name %> </option> 
+       <% } %> 
+     </select>
+   </article>   
 <article> 
   <label class="destacadosincentrar" for="año">Año de publicación:</label>
-  <input type="text" name="publicacion"class="contenedordetexto" id="publicacion" required>
+  <input type="text" name="publicacion"class="contenedordetexto" id="publicacion">
 </article>
 <article>
   <label class="destacadosincentrar" for="paginas">Cantidad de páginas:</label>
-  <input type="text" name="paginas"class="contenedordetexto" id="paginas" required>
+  <input type="text" name="paginas"class="contenedordetexto" id="paginas" >
 </article>
 <article>
   <label class="destacadosincentrar" for="precio">precio:</label>
-  <input type="number" name="precio"class="contenedordetexto" id="precio" required>
+  <input type="number" name="precio"class="contenedordetexto" id="precio" >
 </article>
 
 <article>
   <label class="destacadosincentrar" for="idioma">Idioma:</label>
-  <input type="text" name="idioma"class="contenedordetexto" id="idioma"required>
+  <input type="text" name="idioma"class="contenedordetexto" id="idioma">
 </article>
 <article class="contenedordetexto" ><label class="destacadosincentrar" for="destacado" > Destacar producto</label>
   <input type="checkbox" id="destacado" name="destacado" value="SI"></article>
 <article>
-  <label class="destacadosincentrar" for="categoria">Género : </label>
+   <label class="destacadosincentrar" for="categoria">Género : </label>
   <select name="categoria"class="contenedordetexto" id="categoria">
-    <option value="Programación">Programación</option>
-    <option value="Cocina">Cocina</option>
-    <option value="Ciencia">Ciencia</option>
-    <option value="Drama">Drama</option>
-    <option value="Ciencia ficción">Ciencia ficción</option>
-    <option value="Arte">Arte</option>
+    <% for(category of categories){%>
+      <option value="<%= category.id %> "><%=category.name %> </option> 
+      <% } %> 
     </select>
-  </article>    
+  </article>   
 <article>
   <label class="destacadosincentrar" for="sinopsis">Sinopsis</label> <br>
   <textarea name="sinopsis" id="sinopsis" cols="60" rows="7" > </textarea>
   </section>
 <article class="contenedorbotones">
-  <button type="submit" class="boton3" >Enviar </button>
+  <button type="submit"id="boton" class="boton3" >Enviar </button>
 </article>
 </form>
 </main>
 <footer></footer>
+<script src="/javascripts/create_validation.js" ></script>
 </body>
 </html>

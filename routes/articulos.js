@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const articuloController = require('../controllers/articuloController');
 const multer  = require('multer');
+const validator = require('../middelwares/validator');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -16,10 +17,10 @@ const storage = multer.diskStorage({
 
   
 
-router.get('/',articuloController.crear);
-router.get('/edit/:id',articuloController.editar);
-router.put('/edit/:id',articuloController.modificar);
-router.post('/crear',upload.any(), articuloController.subir);
+router.get('/',upload.any(),articuloController.crear);
+router.get('/edit/:id',upload.any(),articuloController.editar);
+router.put('/edit/:id',upload.any(),validator.Edit,articuloController.modificar);
+router.post('/crear',upload.any(),validator.Create, articuloController.subir);
 router.delete('/delete/:id',articuloController.eliminar);
 router.get('/:id',articuloController.articulo);
 module.exports = router;    

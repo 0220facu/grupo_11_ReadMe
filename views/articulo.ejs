@@ -2,11 +2,11 @@
 <html lang="en">
     <%- include('partials/header') %>
     <main><div class="padrearticulo">
-        <article class="imgarticulo"><img src="/images/<%=producto.img %>" alt="<%= producto.titulo%>" class="total"></article>
+        <article class="imgarticulo"><img src="/images/<%=producto.image %>" alt="<%= producto.name%>" class="total"></article>
         <article class="descripcionarticulo">
-        <P class="titulolibro"><%=producto.titulo %></p>
-        <p class="precioarticulo">$<%= producto.precio %></p> 
-        <p class="textoart"><%= producto.sinopsis %> </p>
+        <P class="titulolibro"><%=producto.name %></p>
+        <p class="precioarticulo">$<%= producto.price %></p> 
+        <p class="textoart"><%= producto.synopsis %> </p>
         <form action="">
             <label for="" class="destacado">Cantidad</label>
             <input type="number" id="cantidad"class="cantidadlibros" value="1" name="cantidad">
