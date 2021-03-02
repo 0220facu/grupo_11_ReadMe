@@ -28,7 +28,7 @@ boton.addEventListener('click' , (event)=>{
         })
         .then((data)=>{
         const  status=  data.meta.status
-        console.log(status)
+
         if(status == 400){
             
             errors.push('el email y la contraseña no coinciden')

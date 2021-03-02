@@ -54,7 +54,7 @@ ingresar:async(req,res)=>{
         
     
 }
-console.log(req.session.user)
+
 res.redirect('/')
 },
 logout:(req,res)=>{

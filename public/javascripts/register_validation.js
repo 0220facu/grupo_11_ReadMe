@@ -21,7 +21,9 @@ button.addEventListener("click", (event)=>{
         errors.push('ingrese un email valido')
     }
 
-    fetch("/api/users")
+
+    fetch("http://localhost:3000/api/users")
+
     .then((response)=>{
         return response.json();
     })
@@ -38,7 +40,7 @@ button.addEventListener("click", (event)=>{
     }
 
     errorsElement.style.display="block"
-    
+
     if (!errors.length) {
                form.submit()
     }
