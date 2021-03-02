@@ -21,7 +21,9 @@ button.addEventListener("click", (event)=>{
         errors.push('ingrese un email valido')
     }
 
+
     fetch("http://localhost:3000/api/users")
+
     .then((response)=>{
         return response.json();
     })

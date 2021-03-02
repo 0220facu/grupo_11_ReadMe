@@ -1,0 +1,22 @@
+[
+ {
+  "id": 1
+ },
+ {
+  "id": 2,
+  "nombre": "naruto uzumaki",
+  "nacimiento": "2020-12-11",
+  "direccion": "konoha 123",
+  "foto_de_perfil": "1608566887728-naruto.jpg",
+  "email": "Naruto.Uzumaki@email.com",
+  "username": "naruto",
+  "contraseña": "$2a$05$u.j2WlS69o4IRf8kMIEOnOcXsKWZO.BHYhKHo2NXiUFXl/tUum3ie",
+  "intereses": [
+   null,
+   null,
+   null,
+   null,
+   ""
+  ]
+ }
+]

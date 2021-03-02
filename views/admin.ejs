@@ -17,10 +17,13 @@
   <% } %>
   <% } %>
 <h2 class="destacado">Agregar nuevo libro</h2>
+<ul class="error" id="errors"></ul>
+
 <form action="/articulo/crear" method="POST" enctype="multipart/form-data">   
 <section class="contenedorflex">  
 <article>
     <label class="destacadosincentrar" for="titulo">Título del libro:</label>
+
       <input type="text" class="contenedordetexto" name="titulo" id="titulo" required>
   </article>
   <article>
@@ -30,6 +33,7 @@
   <article>
     <label class="destacadosincentrar" for="categoria">Escritor : </label>
    <select name="writer"class="contenedordetexto" id="categoria">
+
      <% for(writer of writers){%>
        <option value="<%= writer.id %> "><%=writer.name %> </option> 
        <% } %> 
@@ -37,7 +41,9 @@
    </article>   
    <article>
     <label class="destacadosincentrar" for="categoria">Editorial : </label>
+
    <select name="editorial"class="contenedordetexto" id="categoria">
+
      <% for(editorial of editorials){%>
        <option value="<%= editorial.id %> "><%=editorial.name %> </option> 
        <% } %> 
@@ -45,6 +51,7 @@
    </article>   
 <article> 
   <label class="destacadosincentrar" for="año">Año de publicación:</label>
+
   <input type="text" name="publicacion"class="contenedordetexto" id="publicacion" required>
 </article>
 <article>
@@ -54,11 +61,14 @@
 <article>
   <label class="destacadosincentrar" for="precio">precio:</label>
   <input type="number" name="precio"class="contenedordetexto" id="precio" required>
+
 </article>
 
 <article>
   <label class="destacadosincentrar" for="idioma">Idioma:</label>
+
   <input type="text" name="idioma"class="contenedordetexto" id="idioma"required>
+
 </article>
 <article class="contenedordetexto" ><label class="destacadosincentrar" for="destacado" > Destacar producto</label>
   <input type="checkbox" id="destacado" name="destacado" value="SI"></article>
@@ -75,10 +85,15 @@
   <textarea name="sinopsis" id="sinopsis" cols="60" rows="7" > </textarea>
   </section>
 <article class="contenedorbotones">
+
   <button type="submit" class="boton3" >Enviar </button>
+
 </article>
 </form>
 </main>
 <footer></footer>
+
+<script src="/javascripts/create_validation.js" ></script>
+
 </body>
 </html>

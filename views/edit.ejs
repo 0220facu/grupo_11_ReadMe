@@ -18,11 +18,13 @@
       <p class="error"><%= error.msg %> </p>
   <% } %>
   <% } %>
+
 <form action="/articulo/edit/<%= productoParaEditar.id%>?_method=PUT" method="POST">   
 <section class="contenedorflex">  
 <article>
     <label class="destacadosincentrar" for="titulo">Título del libro:</label>
       <input type="text" class="contenedordetexto" name="titulo" id="titulo"value="<%= productoParaEditar.name %>" required>
+
   </article>
   <article>
     <label class="destacadosincentrar" for="categoria">Escritor : </label>
@@ -50,7 +52,9 @@
    </article>   
 <article>
   <label for="img" class="destacadosincentrar">Imagen:</label>
+
   <input type="file"class="contenedordetexto"  name="img" id=img>
+
 </article>
 <article class="contenedordetexto" ><label class="destacadosincentrar" for="destacado" > Destacar producto</label>
   <input type="checkbox" id="destacado" name="destacado" value="SI"></article>
@@ -60,7 +64,9 @@
   <input type="text" name="publicacion"class="contenedordetexto" id="publicacion"value="<%= productoParaEditar.year %>" required>
 </article>
 <article>
+
   <label class="destacadosincentrar" for="paginas">Cantidad de páginas:</label>
+
   <input type="text" name="paginas"class="contenedordetexto" id="paginas"value="<%= productoParaEditar.pages %>" required>
 </article>
 <article>
@@ -89,7 +95,9 @@
   <textarea name="sinopsis" id="sinopsis" cols="60" rows="7" ><%= productoParaEditar.synopsis %> </textarea>
   </section>
 <article class="contenedorbotones">
+
   <button type="submit" class="boton3" >Enviar </button>
+
 </article>
 </form>
 <article class="centrar">
@@ -101,4 +109,7 @@
 </main>
 <footer></footer>
 </body>
+
+<script src="/javascripts/edit_validation.js"></script>
+
 </html>

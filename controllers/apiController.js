@@ -1,3 +1,4 @@
+
 const { user, book , category} = require('../database/models');
 const bcryptjs =require('bcryptjs');
 const controller = {
@@ -64,6 +65,7 @@ const countByCategory = await categoria.map((category)=>{
     },
     
     loginValidation: async(req,res)=>{
+
     email=req.body.email
      const userLog= await user.findOne({where:{email: email} })
     
@@ -83,6 +85,7 @@ const countByCategory = await categoria.map((category)=>{
         })
     }
 }
+
   
 }
 module.exports= controller
