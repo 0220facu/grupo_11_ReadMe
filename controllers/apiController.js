@@ -85,13 +85,5 @@ const countByCategory = await categoria.map((category)=>{
         })
     }
 }
-<<<<<<< HEAD
 }
 module.exports = controller ;
-
-=======
-
-  
-}
-module.exports= controller
->>>>>>> 024c96a0ab25cba90b24fee6538924a1bf8ebeb1
