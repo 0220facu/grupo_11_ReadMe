@@ -6,7 +6,7 @@ const {book } = require('../database/models')
 const controller={
     index: async (req, res) => { 
         const products =await book.findAll({include: 'category'})
-        console.log(products)
+        
         const destacados =await products.filter( ( product)=> { 
            return product.famous == 1
         }) 

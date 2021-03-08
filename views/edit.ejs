@@ -19,7 +19,7 @@
   <% } %>
   <% } %>
 
-<form action="/articulo/edit/<%= productoParaEditar.id%>?_method=PUT" method="POST">   
+<form action="/articulo/edit/<%= productoParaEditar.id%>?_method=PUT" enctype="multipart/form-data" method="POST">   
 <section class="contenedorflex">  
 <article>
     <label class="destacadosincentrar" for="titulo">Título del libro:</label>
@@ -53,7 +53,7 @@
 <article>
   <label for="img" class="destacadosincentrar">Imagen:</label>
 
-  <input type="file"class="contenedordetexto"  name="img" id=img>
+  <input type="file"class="contenedordetexto" name="img" id=img>
 
 </article>
 <article class="contenedordetexto" ><label class="destacadosincentrar" for="destacado" > Destacar producto</label>

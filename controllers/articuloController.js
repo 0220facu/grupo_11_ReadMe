@@ -81,12 +81,13 @@ modificar: async (req, res) =>{
         synopsis: req.body.sinopsis,
         pages: req.body.paginas,
         famous: req.body.destacado == undefined ? 0 : 1 ,
-        image :  productoParaEditar.image,
+        image :  req.files? req.files[0].filename : productoParaEditar.image,
         editorial_id: req.body.editorial,
         category_id: req.body.category,
         writer_id: req.body.writer,
         
     })
+    c
         res.redirect('/');
 },
 eliminar:async (req,res) =>{

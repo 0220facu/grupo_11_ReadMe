@@ -48,7 +48,7 @@ const countByCategory = await categoria.map((category)=>{
     return countCategory
     
 })
- console.log(countByCategory)
+
  
     res.json({
         count: {count},
