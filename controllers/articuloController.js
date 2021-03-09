@@ -72,7 +72,7 @@ modificar: async (req, res) =>{
             res.render('edit', {errors: errors.errors, products : products, categories, writers, editorials, productoParaEditar })
             return
         }    
-  
+  console.log(req.files)
    await productoParaEditar.update({
         name: req.body.titulo,
         year: req.body.publicacion,
@@ -81,13 +81,13 @@ modificar: async (req, res) =>{
         synopsis: req.body.sinopsis,
         pages: req.body.paginas,
         famous: req.body.destacado == undefined ? 0 : 1 ,
-        image :  req.files? req.files[0].filename : productoParaEditar.image,
+        image :  req.files[0] ? req.files[0].filename : productoParaEditar.image,
         editorial_id: req.body.editorial,
         category_id: req.body.category,
         writer_id: req.body.writer,
         
     })
-    c
+
         res.redirect('/');
 },
 eliminar:async (req,res) =>{
