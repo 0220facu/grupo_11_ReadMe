@@ -26,7 +26,7 @@ const controller = {
     const userDetail =await user.findOne({
         where: {id:id}
     },{
-        attributes:["name", "id", "email", "birth_date", "adress", "image","username",]
+        attributes:["name", "id", "email", "birth_date", "adress", "image","username"]
     })
     res.json(userDetail)
     },
@@ -36,8 +36,9 @@ const controller = {
     const categoria = await category.findAll({include:['books']});
     const count = books.length
     
+const prices = books.map(product => parseInt(product.dataValues.price))
+const totalPrice = prices.reduce((acum, price) => acum + price)
  
-   
 const countByCategory = await categoria.map((category)=>{
     
     const countCategory = {
@@ -51,6 +52,7 @@ const countByCategory = await categoria.map((category)=>{
 
  
     res.json({
+        totalPrice:{totalPrice},
         count: {count},
         coountBycategory: {countByCategory},
         products: {books}

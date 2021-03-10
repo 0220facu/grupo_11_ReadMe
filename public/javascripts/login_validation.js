@@ -13,7 +13,7 @@ boton.addEventListener('click' , (event)=>{
     let regex =/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     if(!regex.test(email.value)){
         errors.push('ingrese un email valido')
-    }else if(password.value < 8){
+    }else if(password.value <= 8){
         errors.push('ingrese una contraseña valida')
     } else {
         const usuario = {email: email.value , password: password.value} 

@@ -7,6 +7,7 @@ const methodOverride = require('method-override');
 const session = require('express-session')
 const cookieCheck =require('./middelwares/cookieCheck')
 const generateSession =require('./middelwares/generateSession')
+const cors =require('cors')
 var app = express();
 
 // view engine setup
@@ -25,7 +26,7 @@ app.use(session({
 }))
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(generateSession)
-
+app.use(cors())
 app.use(cookieCheck)
 
 var usersRouter = require('./routes/users');
